@@ -149,3 +149,68 @@ Impact: While Google Cardboard may not offer the same level of immersion or func
 Overall, Google Cardboard represents an innovative and inclusive approach to virtual reality, demonstrating how a simple and inexpensive viewer can unlock immersive experiences for millions of users worldwide.
 ![Image Description](Pictures/Week1_Slide8.JPG)
 
+# All the other VR
+
+The image appears to be a continuation of the previous one, showing a timeline of virtual reality (VR) headsets and their progression over the years.
+
+On the left side, there's text denoting significant years and the corresponding VR headsets released:
+
+2015: Samsung Gear VR
+2016: HTC Vive, Oculus Rift, PlayStation VR
+These were all major VR headsets released in those years, marking significant developments in consumer VR technology.
+
+The Samsung Gear VR was a mobile VR headset developed in collaboration with Oculus. It used a Samsung Galaxy smartphone as the display and processor.
+
+In 2016, several high-profile VR systems were released:
+
+HTC Vive: Developed by HTC and Valve Corporation, known for its room-scale VR capabilities that allow the user to move around in a virtual space.
+Oculus Rift: One of the first successful consumer-facing PC-based VR headsets, developed by Oculus VR, a division of Facebook Inc.
+PlayStation VR: Sony's VR headset for the PlayStation 4 gaming console, making VR more accessible to console gamers.
+![Image Description](Pictures/Week1_Slide9.JPG)
+
+### Definitions
+#### What is XR
+Chatgpt says:
+"XR" stands for Extended Reality, and it's an umbrella term that covers various forms of computer-altered reality, including:
+
+Virtual Reality (VR): This technology immerses users in a fully artificial digital environment. VR requires the use of headsets that take over your vision to give you the impression that you're somewhere else.
+
+Augmented Reality (AR): AR overlays digital content on the real world through either a display device like a smartphone or smart glasses. It doesn't replace the real world with a virtual one; it adds to it with images, sounds, and other virtual enhancements.
+
+Mixed Reality (MR): MR combines elements of both AR and VR, real-world and digital objects interact. Mixed Reality can be experienced through a headset or on next-generation computing devices, providing the ability to see and immerse yourself in the world around you even as you interact with a virtual environment using your own hands—all without ever removing your headset. It is sometimes considered an advanced form of AR.
+
+XR technologies are used in various applications like gaming, education, healthcare, military, and many other fields. They offer immersive experiences and are being explored for their potential to provide training, enhance the user experience, and improve productivity in various industries.
+![Image Description](Pictures/Week1_Slide10.JPG)
+![Image Description](Pictures/Week1_Slide14.JPG)
+
+### Immersification Continuum
+No idea what this is 
+![Image Description](Pictures/Week1_Slide11.JPG)
+
+### Milgram Kishino RV Continuum
+The Milgram-Kishino Virtuality Continuum, often referred to simply as the "Virtuality Continuum," is a conceptual framework proposed by Paul Milgram and Fumio Kishino in 1994. This continuum categorizes reality and virtuality into a spectrum ranging from the physical world to fully immersive virtual environments. It aims to provide a framework for understanding and categorizing different types of environments based on their level of virtuality and the degree of presence experienced by users. Here's an overview of the Virtuality Continuum:
+
+Physical Reality (Physical World): At one end of the continuum is physical reality, which represents the real-world environment that we perceive through our senses. This includes the tangible physical objects, spaces, and interactions that we experience in the physical world.
+
+Augmented Reality (AR): Moving along the continuum, augmented reality (AR) overlays virtual content onto the physical environment, enhancing or augmenting the user's perception of reality. AR technology integrates digital information, such as images, text, or 3D models, with the user's view of the real world in real-time.
+
+Augmented Virtuality (AV): Augmented virtuality represents environments where physical elements are integrated into a predominantly virtual environment. In AV, virtual content is the primary focus, but elements of the physical world are incorporated to enhance the virtual experience. An example of AV might be a virtual training simulation where physical objects or props are used alongside virtual environments.
+
+Virtual Reality (VR): Further along the continuum is virtual reality (VR), where users are fully immersed in a simulated environment that is entirely computer-generated. VR technology typically involves head-mounted displays (HMDs) and other sensory input devices to create a sense of presence and immersion within the virtual environment.
+
+Mixed Reality (MR) and Extended Reality (XR): Mixed reality (MR) and extended reality (XR) are terms that encompass a spectrum of environments that combine elements of both the physical and virtual worlds. These terms are often used interchangeably to refer to environments where virtual and physical elements coexist and interact in real-time, providing users with varying levels of immersion and presence.
+
+The Virtuality Continuum provides a useful framework for understanding the relationship between different types of environments based on their level of virtuality and the degree of immersion experienced by users. It acknowledges that the boundaries between physical reality, augmented reality, and virtual reality are fluid and that technologies such as AR, VR, MR, and XR can blend these elements in diverse and innovative ways.
+![Image Description](Pictures/Week1_MilgramKishino.png)
+
+### RV Continuum and IM Continuum
+Extent of World Knowledge (EWK) Continuum: This measures how much of the real world is modeled in the system. It goes from no real-world modeling to a fully detailed virtual model of the real world.
+
+Reproduction Fidelity (RF) Continuum: This scale assesses the quality of the virtual content's reproduction, ranging from no virtual content to a level where real and virtual content are indistinguishable.
+
+Extent of Presence Metaphor (EPM) Continuum: This measures the degree to which the system allows user interaction, from no display to fully immersive environments where virtual interactions are indistinguishable from direct viewing and interaction in the real world.
+![Image Description](Pictures/Week1_Slide12.JPG)
+![Image Description](Pictures/Week1_Slide13.JPG)
+
+### Mentimeter Questions
+

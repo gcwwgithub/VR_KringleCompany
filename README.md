@@ -213,4 +213,12 @@ Extent of Presence Metaphor (EPM) Continuum: This measures the degree to which t
 ![Image Description](Pictures/Week1_Slide13.JPG)
 
 ### Mentimeter Questions
-
+![Image Description](Pictures/Week1_Slide15.JPG)
+![Image Description](Pictures/Week1_Slide16.JPG)
+![Image Description](Pictures/Week1_Slide17.JPG)
+![Image Description](Pictures/Week1_Slide18.JPG)
+![Image Description](Pictures/Week1_Slide19.JPG)
+![Image Description](Pictures/Week1_Slide20.JPG)
+![Image Description](Pictures/Week1_Slide21.JPG)
+![Image Description](Pictures/Week1_Slide22.JPG)
+![Image Description](Pictures/Week1_Slide23.JPG)

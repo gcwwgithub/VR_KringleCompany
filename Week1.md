@@ -1,4 +1,4 @@
-![Week1_Slide4](https://github.com/gcwwgithub/VR_KringleCompany/assets/30390539/501b14d8-ccb7-4172-ae05-43891525e89d)# VR_KringleCompany
+# VR_KringleCompany
 Great Asset, Great Great Asset
 
 ## Week 1

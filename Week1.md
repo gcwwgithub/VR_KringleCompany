@@ -201,6 +201,7 @@ Virtual Reality (VR): Further along the continuum is virtual reality (VR), where
 Mixed Reality (MR) and Extended Reality (XR): Mixed reality (MR) and extended reality (XR) are terms that encompass a spectrum of environments that combine elements of both the physical and virtual worlds. These terms are often used interchangeably to refer to environments where virtual and physical elements coexist and interact in real-time, providing users with varying levels of immersion and presence.
 
 The Virtuality Continuum provides a useful framework for understanding the relationship between different types of environments based on their level of virtuality and the degree of immersion experienced by users. It acknowledges that the boundaries between physical reality, augmented reality, and virtual reality are fluid and that technologies such as AR, VR, MR, and XR can blend these elements in diverse and innovative ways.
+
 ![Image Description](Pictures/Week1_MilgramKishino.png)
 
 ### RV Continuum and IM Continuum
@@ -222,3 +223,4 @@ Extent of Presence Metaphor (EPM) Continuum: This measures the degree to which t
 ![Image Description](Pictures/Week1_Slide21.JPG)
 ![Image Description](Pictures/Week1_Slide22.JPG)
 ![Image Description](Pictures/Week1_Slide23.JPG)
+![Image Description](Pictures/Week1_Slide24.JPG)

@@ -29,16 +29,16 @@ Modern Hardwares - Wearable Motion Trackers, eye trackers (helps to improve imme
 5. For the left eye - the Wvirt1 > Wvirt2 and for the right eye Wvirt2 < Wvirt1
 6. The result from above produces a horizontally asymmetric view frustrum and creates different images but look from above, it looks the same
 7. 1 - 4 contains the values needed to generate the perspective projection matrix that defines the virtual view frustrum in particular the near and far plane depths, the height and the left and right widths of the the virtual view frustrum. You can also obtain values for the view matrix (how the eyes look at the frustrum), Values obtained: positions of the eye and where the eye look at
-![Image Description](Pictures/Week5_Slide12.JPG)
-![Image Description](Pictures/Week5_Slide13.JPG)
-![Image Description](Pictures/Week5_Slide14.JPG)
+![Image Description](Pictures/Week5_Slide12.PNG)
+![Image Description](Pictures/Week5_Slide13.PNG)
+![Image Description](Pictures/Week5_Slide14.PNG)
 
 8. You can use all of these libraries in low level graphics libraries to actually create the image.
 9. The angles for the FOV for top and side are calculated differently because the top produces different images and therefore different angles. For the top FOV, you need to get the nasal angle and the temporal angle and this helps you to get the monocular fov (combined visual span but seen indivdually) and the binocular fov (combined visual span as seen by both eyes)
-![Image Description](Pictures/Week5_Slide15.JPG)
-![Image Description](Pictures/Week5_Slide16.JPG)
-![Image Description](Pictures/Week5_Slide17.JPG)
-![Image Description](Pictures/Week5_Slide18.JPG)
+![Image Description](Pictures/Week5_Slide15.PNG)
+![Image Description](Pictures/Week5_Slide16.PNG)
+![Image Description](Pictures/Week5_Slide17.PNG)
+![Image Description](Pictures/Week5_Slide18.PNG)
 
 10. Lens Distortion - 
 

@@ -1,7 +1,49 @@
 # VR_KringleCompany
 Great Asset, Great Great Asset
 
-### Mentimeter Questions
+## Types of XR Devices
+VR - Meta Quest, HTC Vive
+AR - Magic Leap and your phones
+MR - Hololens
+Blurring the lines - Meta Quest Pro
+
+## Common H/W Components
+VR HMD - PCVR - Comes with sensors and wirse
+    - Standalone VR - No cables and inside out tracking
+    
+AR HMDs - Mobile Phones
+
+XR HMDs - Become increasing common
+
+Components - Display Screen, 2 Magnifier Glasses and Specicialized Contols that emit infrared lights and motion tracking sensors to detect these lights and other motion traciking sensors to detect these lights, other motion tracking sensors, cameras all overs, a battery, spekers, CPU, GPU, motherboard and sensors that can be found on a modern day smartphone
+
+Smartphone has alot of the same parts as VR headsets but phones do not have HMDs.
+
+Modern Hardwares - Wearable Motion Trackers, eye trackers (helps to improve immersion)
+
+## Image Formation in HMDS
+1. Focal Length = f
+2. Eye relief = Deye
+3. Screen Lens Distance = Ddisp
+4. IPD = Interpupuilery Distance
+5. For the left eye - the Wvirt1 > Wvirt2 and for the right eye Wvirt2 < Wvirt1
+6. The result from above produces a horizontally asymmetric view frustrum and creates different images but look from above, it looks the same
+7. 1 - 4 contains the values needed to generate the perspective projection matrix that defines the virtual view frustrum in particular the near and far plane depths, the height and the left and right widths of the the virtual view frustrum. You can also obtain values for the view matrix (how the eyes look at the frustrum), Values obtained: positions of the eye and where the eye look at
+8. You can use all of these libraries in low level graphics libraries to actually create the image.
+9. The angles for the FOV for top and side are calculated differently because the top produces different images and therefore different angles. For the top FOV, you need to get the nasal angle and the temporal angle and this helps you to get the monocular fov (combined visual span but seen indivdually) and the binocular fov (combined visual span as seen by both eyes)
+10. Lens Distortion - Most VR headesets already applied lens distortion correction. The algorithm - the further the point, the more it needs to be corrected?
+11. Chromatic Abberations - I used chatgpt
+Chromatic aberration is a type of distortion in optical systems where light of different colors does not converge at the same point after passing through a lens. It occurs because lenses have a different refractive index for light of different wavelengths, which means that colors of the spectrum are focused at slightly different distances from the lens. This effect can cause images to have colored edges around objects, especially towards the edges of the visual field.
+12. 
+
+## Common S/W Components
+RTIS actually :)
+Video games are a subset of software components.
+Components are essentially engine components - Renering, physics, inputs, audio ai,
+Do i need to explain these systems?
+He mentions ECS as well
+
+## Mentimeter Questions
 ![Image Description](Pictures/Week5_Slide1.JPG)
 ![Image Description](Pictures/Week5_Slide2.JPG)
 ![Image Description](Pictures/Week5_Slide3.JPG)

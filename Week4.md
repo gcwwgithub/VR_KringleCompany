@@ -57,6 +57,109 @@ From Chek
 2. Rendering and physics using state of the art techniques and "target performance"
 3. Large and active community
 
+### WebXR
+From ChatGPT
+WebXR, or Web Extended Reality, is a set of standards and technologies that enables immersive experiences, including virtual reality (VR) and augmented reality (AR), to be delivered through web browsers. It allows developers to create VR and AR applications that can be accessed and experienced directly through web browsers, without the need for users to install additional software or applications.
+
+WebXR builds upon the capabilities of WebVR and WebAR, extending them to support a wider range of devices and experiences. It provides APIs (Application Programming Interfaces) that developers can use to access the features of VR and AR devices, such as headsets, controllers, and sensors, allowing them to create interactive and immersive content for the web.
+
+One of the key advantages of WebXR is its accessibility. Users can access WebXR experiences across a variety of devices, including desktop computers, smartphones, and standalone VR headsets, simply by visiting a website. This democratizes access to VR and AR content, making it easier for developers to reach a broader audience without the need for specialized hardware or software.
+
+Overall, WebXR represents a significant step forward in making immersive experiences more widely available and accessible on the web, opening up new possibilities for entertainment, education, training, and other applications.
+
+From Chek
+in general webxr refers to a set of open apis that aim to standardize the way XR apps are created on the web it originally started with the web XR device API but has since worked on a number of other open apis including the web XR Gamepad API and the WebEx are AR API a greater adoption of common standards will go a long way in moving the industry forward
+
+### JavaScript vs TypeScript 
+JavaScript and TypeScript are both programming languages used for web development, but they have some key differences. JavaScript is a dynamically typed language, while TypeScript is a statically typed superset of JavaScript that adds optional static typing and other features. Here's a code example to illustrate some of the differences:
+
+// JavaScript code
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(greet(123));     // Output: Hello, 123!
+
+// TypeScript code
+function greet(name: string): string {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("John")); // Output: Hello, John!
+console.log(greet(123));     // Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+### Order? I dont know if its correct, its in the video
+Open XR
+
+
+Bablyon JS
+A-Frame
+Unity
+Unreal
+
+
+
+Cospaces
+
+### OpenXR C++ SDK
+From ChatGPT
+OpenXR is an open, royalty-free standard for virtual reality (VR) and augmented reality (AR) applications and devices. It was developed by the Khronos Group, a consortium of companies working on creating open standards for multimedia and parallel computing. OpenXR aims to address the fragmentation and compatibility issues that arise in the VR and AR ecosystem by providing a common API (Application Programming Interface) for developers to target multiple VR and AR platforms.
+
+OpenXR is an open, royalty-free standard for virtual reality (VR) and augmented reality (AR) applications and devices. It was developed by the Khronos Group, a consortium of companies working on creating open standards for multimedia and parallel computing. OpenXR aims to address the fragmentation and compatibility issues that arise in the VR and AR ecosystem by providing a common API (Application Programming Interface) for developers to target multiple VR and AR platforms.
+
+Key features and goals of OpenXR include:
+
+Cross-Platform Compatibility: OpenXR is designed to work across various VR and AR platforms, including different hardware devices and software ecosystems. This allows developers to write applications once and deploy them across multiple platforms without significant modifications.
+
+Hardware Abstraction: OpenXR abstracts the differences between VR and AR hardware devices, such as headsets, controllers, and sensors, allowing developers to write code that interacts with these devices in a unified manner.
+
+Optimization and Performance: OpenXR provides mechanisms for optimizing performance and reducing latency in VR and AR applications, ensuring a smoother and more immersive user experience.
+
+Vendor Neutrality: OpenXR is an open standard that is not tied to any specific hardware manufacturer or software platform, promoting vendor neutrality and fostering innovation within the VR and AR industry.
+
+Community Collaboration: OpenXR is developed collaboratively by industry stakeholders through the Khronos Group, allowing for input and contributions from a wide range of companies and developers.
+
+Overall, OpenXR aims to simplify the development process for VR and AR applications, improve interoperability between different hardware and software platforms, and accelerate the growth of the VR and AR ecosystem by providing a common foundation for developers to build upon.
+
+From Chek
+Only go this route if you need  to implement some unique novel features that require Ultra custom code close to the metal on the targeted platform
+
+### Cospaces
+CoSpaces is a platform that allows users to create, share, and explore virtual reality (VR) and augmented reality (AR) experiences without the need for coding skills. It provides an intuitive and user-friendly interface for building immersive 3D environments, interactive scenes, and games.
+
+Key features of CoSpaces include:
+
+Visual Programming: CoSpaces offers a drag-and-drop interface for creating interactive elements and programming behaviors without writing code. Users can easily add and manipulate objects, characters, animations, and logic to design their VR and AR experiences.
+
+Asset Library: CoSpaces provides a library of pre-made 3D models, textures, sounds, and animations that users can use to quickly populate their scenes and enhance their creations.
+
+Collaboration: CoSpaces supports collaborative editing, allowing multiple users to work on the same project simultaneously. This feature is particularly useful for classrooms, workshops, and team projects where collaboration is essential.
+
+Cross-Platform Compatibility: CoSpaces experiences can be viewed and interacted with on various devices, including desktop computers, smartphones, tablets, and VR headsets. This enables users to access and share their creations across different platforms and devices.
+
+Educational Use: CoSpaces is widely used in educational settings to create immersive learning experiences, virtual field trips, simulations, and presentations. It provides educators with a powerful tool for engaging students and enhancing learning outcomes through experiential and interactive content.
+
+Overall, CoSpaces empowers users to unleash their creativity and imagination to build immersive VR and AR experiences without the need for advanced technical skills, making it accessible to a wide range of users, including educators, students, hobbyists, and professionals.
+
+### Key Considerations
+1. Requirements of specific project - this will forgo the personal inclinations (like if you like Unity but need to use BabylonJS)
+2. Cost
+3. Stability (like does the API got bugs)
+4. Customisability
+5. Community + Support
+6. Learning Opportunites
+
+### Why our course use BablyonJS
+1. Facilitate Learning in the best way possible
+2. Accessbility for users
+3. Large Dev Community Support
+4. Supports the latest web GPU API
+5. Provides Longevity to the prototypes built - could allow you to transfer knowledge to other webxr applications
+6. Appreciate the nuanced technicalities - you will need to consider the technical details and knowledge when making the apps
+7. Contribute to XRAuthor which is a research project - yes the school is trying to slave us.
+
+
 
 ## Mentimeter Questions
 ![Image Description](Pictures/Week4_Slide1.JPG)

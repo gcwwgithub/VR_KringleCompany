@@ -5,7 +5,7 @@ Great Asset, Great Great Asset
 Standard Development Flow -> Implement Tech1, Tech2,Tech3,Tech4 -> Test
 
 ## Test Driven Development 
-![Image Description](Pictures/Week2_Slide20.PNG)
+![Image Description](Pictures/Week1_Slide20.PNG)
 
 ## Immersion
 

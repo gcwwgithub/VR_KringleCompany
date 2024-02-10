@@ -261,8 +261,7 @@ You are building your own metaverse application, an immersive social network tha
 ![Image Description](Pictures/Week4_Slide9.JPG)
 Chek logic is Unity web support not good so choose the one gives better web support and that is Babylon JS. Sure whatever fuck u.
 
-I cant read the bloody question for the next one but its something like that
-The question sis something like You need to implement a cross platform native (i cant tell is it XR or VR) experience using a novel hand tracking application and you want to focus on implementing VR components with the same undelying code base access. Metas something HMDS, HTC Vive HMDs. Google Cardboard, something image is align it is an open standard so that here is a something developer ecosystem and that the underlyinh something will be constanttly improved
+The question is  You need to implement a cross platform native VR experience using a novel hand tracking algorithm and you want to focus on implementing VR components with the same undelying code base across Meta Quest HMDS, HTC Vive HMDs and Google Cardboard. You hope to align it to an open standard so that there is a vibrant developer ecosystem and that the underlying tooling will be constanttly improved
 
 My guess is that standards are generally OpenXR 
 ![Image Description](Pictures/Week4_Slide10.JPG)

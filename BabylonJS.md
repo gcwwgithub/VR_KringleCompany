@@ -266,3 +266,28 @@ This line creates an advanced dynamic texture associated with the plane mesh. Ad
 
 ```helloTexture.addControl(helloText);```
 This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.
+
+
+### Create VR Experience
+```
+const xr = scene.createDefaultXRExperienceAsync({
+    uiOptions: {
+        sessionMode: 'immersive-vr'
+    }
+})
+```
+The provided code is from Babylon.js and is used to create a default WebXR (Web Extended Reality) experience in a Babylon.js scene. Here's what each part of the code does:
+
+scene.createDefaultXRExperienceAsync():
+This method creates a default WebXR experience within the given scene. It enables support for WebXR in the browser and sets up the necessary components to allow users to experience the scene in virtual reality (VR) or augmented reality (AR) depending on their device and capabilities.
+
+uiOptions: { sessionMode: 'immersive-vr' }:
+This part of the code specifies options for the user interface (UI) of the XR experience. In this case, it sets the sessionMode option to 'immersive-vr', indicating that the XR session should be in immersive virtual reality (VR) mode. This means that the scene will be experienced in full VR mode, where users are fully immersed in the virtual environment.
+
+xr variable:
+The xr variable is assigned the result of the createDefaultXRExperienceAsync() method call. This variable likely represents the XR experience itself or contains information about the XR session, which can be used for further interaction or customization.
+
+In summary, the code sets up a default WebXR experience in a Babylon.js scene, specifically configuring it to operate in immersive virtual reality (VR) mode. This allows users to interact with the scene using VR devices and experience it in a fully immersive virtual environment.
+
+### Morzilla Web XR Emulator
+After you get on the web host, if you have the emulatr, there will be an icon on the bottom right of the screen. You click on it and now you can see VR Mode. You can even move around a VR Headset on controllers as well

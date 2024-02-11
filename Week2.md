@@ -145,13 +145,11 @@ According to him, for this type of questions, when you are trying to discover so
 The experience is "I was surpised that 30 minutes already passed when i took off the headset, i thought i was 5 minutes"
 ![Image Description](Pictures/Week2_Slide15.JPG)
 
-The experience is "My head knocked into the wall as I tried to dodge the ball coming at me. My mom was telling me how close i got to the wall but i was unaware that she mentioned that to me"
-![Image Description](Pictures/Week2_Slide16.JPG)
 
-The experience is "My friend was telling me how stupid i looked when I was playing the VR game trying to dodge all the balls but I wasnt aware of how I looked because I was more focused on dodging"
+The experience is "My head knocked into the wall as I tried to dodge the ball coming at me. My mom was telling me how close i got to the wall but i was unaware that she mentioned that to me"
 ![Image Description](Pictures/Week2_Slide17.JPG)
 
-
+The experience is "My friend was telling me how stupid i looked when I was playing the VR game trying to dodge all the balls but I wasnt aware of how I looked because I was more focused on dodging"
 ![Image Description](Pictures/Week2_Slide18.JPG)
 ![Image Description](Pictures/Week2_Slide19.JPG)
 ![Image Description](Pictures/Week2_Slide20.JPG)

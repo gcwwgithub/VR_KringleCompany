@@ -1,4 +1,4 @@
-![Week1_Slide4](https://github.com/gcwwgithub/VR_KringleCompany/assets/30390539/501b14d8-ccb7-4172-ae05-43891525e89d)# VR_KringleCompany
+# VR_KringleCompany
 Great Asset, Great Great Asset
 
 ## BablyonJS
@@ -178,6 +178,7 @@ run dev
 Install babylon js
 npm i babylonjs@core
 
+### Bablylon JS Code Beginning
 The beginning code is like this
 ```
 // main.ts
@@ -207,12 +208,57 @@ export class App {
 
   async createScene(): Promise<Scene> {
     const scene = new Scene(this.engine);
+    scene.createDefaultCameraOrLight()l;
     return scene;
   }
 }
-
-
 ```
-There was a index.html file earlier right, in that file, sonjia added a canvas file to the html and in the main.ts, he gets the canvas. The result is when he loads the web host, you will see a black image representing the canvas
+There was a index.html file earlier right, in that file, sonjia added a canvas file to the html and in the main.ts, he gets the canvas. The result is when he loads the web host, you will see a black image representing the canvas. 
 
+### Babylonjs Canvas
+```
+const canvas = document.getElementById('renderCanvas') as HTMLCanvasElement;
+
+const ctx = canvas.getContext('2d');
+ctx.font = '50px Arial';
+
+ctx.fillText('Hello XR', 50, 50);
+```
+The getContext('2d') call retrieves the 2D rendering context for the specified canvas element (renderCanvas). The '2d' argument indicates that the rendering context being requested is for 2D drawing operations.
+
+Once the rendering context (ctx) is obtained, it provides methods and properties that allow you to perform various drawing operations on the canvas, such as drawing shapes, text, images, and applying transformations.
+
+### Create a Sphere
+```
+const scene = new Scene(this.engine);  
+
+scene.createDefaultCameraOrLight();
+
+const sphere = MeshBuilder.CreateSphere('sphere', { diameter: 1.3 }, scene); 
+
+sphere.position.y = 1; 
+sphere.position.z = 5; 
+```
+
+### Create Text
+```
+const helloPlane = MeshBuilder.CreatePlane('hello plane', { size: 15 });
+//This line creates a plane mesh named 'hello plane' with a size of 15 units. This plane will serve as the background for displaying the text.
+
+
+helloPlane.position.y = 0;
+helloPlane.position.z = 5;
+
+//This line creates an advanced dynamic texture associated with the plane mesh. AdvancedDynamicTexture is a Babylon.js feature that allows for rendering 2D elements onto 3D objects.
+const helloTexture = AdvancedDynamicTexture.CreateForMesh(helloPlane);
+
+const helloText = new TextBlock('hello');
+helloText.text = 'Hello XR';
+
+helloText.color = 'purple';
+helloText.fontSize = 50;
+
+//This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.
+helloTexture.addControl(helloText);
+```
 

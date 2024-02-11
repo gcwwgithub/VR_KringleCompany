@@ -165,18 +165,18 @@ Here's a minimal example of a tsconfig.json file:
 
 ### Vite
 First install vite in your project
-npm vite@latest - installs vite
+```npm vite@latest``` - installs vite
 
 Next install dependencies
-npm i
+```npm i```
 
 This songjia cant really make any sense on why the dependencies was not already installed but oh well
 
 To run project
-run dev
+```run dev```
 
 Install babylon js
-npm i babylonjs@core
+```npm i babylonjs@core```
 
 ### Bablylon JS Code Beginning
 The beginning code is like this
@@ -268,7 +268,7 @@ This line creates an advanced dynamic texture associated with the plane mesh. Ad
 This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.
 
 
-### Create VR Experience
+### Create VR Experience and Async
 ```
 const xr = scene.createDefaultXRExperienceAsync({
     uiOptions: {
@@ -289,5 +289,74 @@ The xr variable is assigned the result of the createDefaultXRExperienceAsync() m
 
 In summary, the code sets up a default WebXR experience in a Babylon.js scene, specifically configuring it to operate in immersive virtual reality (VR) mode. This allows users to interact with the scene using VR devices and experience it in a fully immersive virtual environment.
 
+**Note: xr is a promise**
+As part of async coding, other code below this will run without waiting for the xr to initalise. So if you do something with xr, u will crash or something. If you want to ensure it initialise properly u can add a await in front. BUt the function the code is called needs an async in front. Afterwards, you will be able to use xr as per normal.
+So here is an example
+```
+// Create an async function to set up the Babylon.js scene
+async function setupScene() {
+    // Create a new Babylon.js engine
+    const engine = new Engine(canvas, true);
+
+    // Create a new Babylon.js scene
+    const scene = new Scene(engine);
+
+    // Create an XR experience asynchronously
+    const xr = await scene.createDefaultXRExperienceAsync({
+        uiOptions: {
+            sessionMode: 'immersive-vr'
+        }
+    });
+    // Run the render loop
+    engine.runRenderLoop(() => {
+        scene.render();
+    });
+}
+
+// Call the async function to set up the scene when the window has finished loading
+window.onload = async () => {
+    await setupScene();
+};
+```
+Just remember this, everytime you use async, it returns a Promise which means its a promise that a value will be eventually there so therefore you always need to ensure you declare await. Lets say you have a promise object, how do you get it to do stuff. Our code earlier has the answer
+```
+scenePromise.then((scene) => {
+  engine.runRenderLoop(() => {
+    scene.render();
+  });
+});
+```
+Then basically says, what should I do after the promise is fulfilled or in other words, what happens after the promise has been fulfilled and the object is initialised? It will call a callback which you see here is to runRenderLoop()
+
+### Quick Debugging tip
+The line ```(window as any).xr = xr;``` in TypeScript is a way to attach the xr variable to the global window object. By doing this, xr becomes accessible from anywhere in the web application, including the browser's console, which is particularly useful for debugging purposes.
+
+Here's what this line of code does:
+
+window: This is the global object in the context of the browser, representing the window in which the script is running.
+as any: TypeScript is a statically typed superset of JavaScript. Using as any is a type assertion in TypeScript which tells the compiler to treat the window object as any type, effectively turning off type checking for this expression. This is done because window does not have a property xr by default, so you have to assert it to any to bypass the type checking system.
+.xr = xr;: This assigns the xr variable (which presumably holds a reference to a WebXR experience created by scene.createDefaultXRExperienceAsync()) to a new property xr on the window object.
+After running this line of code, you could open your browser's developer console and access the xr variable directly, which is useful for inspecting its properties and methods, debugging issues with your WebXR experience, or even manipulating the WebXR session in real-time. It effectively makes xr a global variable, which should generally be avoided in production code due to the potential for naming collisions and it being considered a bad practice, but for debugging, it's a useful shortcut.
+
 ### Morzilla Web XR Emulator
-After you get on the web host, if you have the emulatr, there will be an icon on the bottom right of the screen. You click on it and now you can see VR Mode. You can even move around a VR Headset on controllers as well
+After you get on the web host, if you have the emulator, there will be an icon on the bottom right of the screen. You click on it and now you can see VR Mode. You can even move around a VR Headset on controllers as well
+
+### AR Debugging
+```
+const xr = await scene.createDefaultXRExperienceAsync({
+        uiOptions: {
+            sessionMode: 'immersive-ar'
+        }
+    });
+```
+Then in the XR emulator, just change ur device into a phone
+
+### Meta Quest Debuggingf
+1. Create an organisation and then create a account
+2. Enable USB Debugging but you must have an account with the developer mode enabled
+3. Make sure you install adb so you can use ```adb devices`` in console to see the connected device
+4. Use ```adb reverse``` to allow  the quest can access a local host website on the connected desktop through the cable
+
+### Android Debugging
+
+### IOS Debugging

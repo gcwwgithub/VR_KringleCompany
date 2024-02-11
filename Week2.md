@@ -123,10 +123,19 @@ I lazy do
 ![Image Description](Pictures/Week2_Slide2.JPG)
 ![Image Description](Pictures/Week2_Slide3.JPG)
 ![Image Description](Pictures/Week2_Slide4.JPG)
+Quantitative data according to chek is something that can be converted to numbers and can be converted into statistics. The reason why flow works is because the flow state thingie is numbers
+
 ![Image Description](Pictures/Week2_Slide5.JPG)
 ![Image Description](Pictures/Week2_Slide6.JPG)
+They are also quantitative data also. According to chek, qualitative can "extract more user experiences"
+
+The question for the next slide is the VR version more immersive than the desktop version?
 ![Image Description](Pictures/Week2_Slide7.JPG)
+
+What user experiences does the VR classroom intervention afford during the class
 ![Image Description](Pictures/Week2_Slide8.JPG)
+According to him, for this type of questions, when you are trying to discover som phenomenon then go for more qualitative ones which is why you choose these three answers
+
 ![Image Description](Pictures/Week2_Slide9.JPG)
 ![Image Description](Pictures/Week2_Slide10.JPG)
 ![Image Description](Pictures/Week2_Slide11.JPG)

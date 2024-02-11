@@ -351,12 +351,13 @@ const xr = await scene.createDefaultXRExperienceAsync({
 ```
 Then in the XR emulator, just change ur device into a phone
 
-### Meta Quest Debuggingf
+### Meta Quest Debugging
 1. Create an organisation and then create a account
 2. Enable USB Debugging but you must have an account with the developer mode enabled
-3. Make sure you install adb so you can use ```adb devices`` in console to see the connected device
+3. Make sure you install adb so you can use ```adb devices``` in console to see the connected device
 4. Use ```adb reverse``` to allow  the quest can access a local host website on the connected desktop through the cable
 
 ### Android Debugging
+Same as above but connect the android phone instead
 
 ### IOS Debugging

@@ -243,13 +243,11 @@ sphere.position.z = 5;
 ### Create Text
 ```
 const helloPlane = MeshBuilder.CreatePlane('hello plane', { size: 15 });
-//This line creates a plane mesh named 'hello plane' with a size of 15 units. This plane will serve as the background for displaying the text.
-
 
 helloPlane.position.y = 0;
 helloPlane.position.z = 5;
 
-//This line creates an advanced dynamic texture associated with the plane mesh. AdvancedDynamicTexture is a Babylon.js feature that allows for rendering 2D elements onto 3D objects.
+
 const helloTexture = AdvancedDynamicTexture.CreateForMesh(helloPlane);
 
 const helloText = new TextBlock('hello');
@@ -258,7 +256,13 @@ helloText.text = 'Hello XR';
 helloText.color = 'purple';
 helloText.fontSize = 50;
 
-//This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.
-helloTexture.addControl(helloText);
-```
 
+```
+```MeshBuilder.CreatePlane('hello plane', { size: 15 });```
+This line creates a plane mesh named 'hello plane' with a size of 15 units. This plane will serve as the background for displaying the text.
+
+```const helloTexture = AdvancedDynamicTexture.CreateForMesh(helloPlane); ```
+This line creates an advanced dynamic texture associated with the plane mesh. AdvancedDynamicTexture is a Babylon.js feature that allows for rendering 2D elements onto 3D objects.
+
+```helloTexture.addControl(helloText);```
+This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.

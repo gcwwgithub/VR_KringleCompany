@@ -1,224 +1,218 @@
 ![Week1_Slide4](https://github.com/gcwwgithub/VR_KringleCompany/assets/30390539/501b14d8-ccb7-4172-ae05-43891525e89d)# VR_KringleCompany
 Great Asset, Great Great Asset
 
-## Week 1
+## BablyonJS
+I dont know what the fuck notes to do here. Take note week 4 have some babylon js questions and notes there as well
 
-### History of VR
+### Node.js
+Node.js is an open-source, cross-platform JavaScript runtime environment that allows developers to execute JavaScript code outside of a web browser. It uses the V8 JavaScript engine from Google Chrome to execute JavaScript code on the server-side, enabling the development of scalable and high-performance network applications.
 
-#### Sensorama 
-It was an early example of immersive, multi-sensory technology developed in the 1960s by filmmaker Morton Heilig. It was one of the first attempts at creating a virtual reality (VR) experience. The Sensorama was essentially a mechanical device resembling an arcade game cabinet that included a stereoscopic **3D display**, **stereo sound**, vibration, and even **scent generators**. Users would sit in front of the machine with their head placed in a head-mounted display (HMD) and experience short films that engaged multiple senses simultaneously.
+Some key features of Node.js include:
 
-The Sensorama aimed to provide an immersive experience by stimulating various senses to create a more realistic environment. While it didn't gain widespread popularity or commercial success at the time, it laid the groundwork for future developments in VR technology. Today, Sensorama is recognized as an important milestone in the history of virtual reality and immersive media.
-![Image Description](Pictures/Week1_Slide1.JPG)
+Asynchronous and Event-Driven: Node.js uses an event-driven, non-blocking I/O model, which allows it to handle multiple connections concurrently without getting blocked by I/O operations. This makes it well-suited for building real-time applications like chat servers, streaming services, and APIs.
 
-#### Sword of Damocles
-The Sword of Damocles is the first ***head-mounted display (HMD)*** created by computer graphics pioneer Ivan Sutherland in 1968.
+NPM (Node Package Manager): npm is the default package manager for Node.js and the largest software registry in the world. It allows developers to discover, share, and reuse packages of code, making it easy to integrate third-party libraries, frameworks, and tools into Node.js projects.
 
-The "Sword of Damocles" earned its name due to the large mechanical apparatus that hung from the ceiling, resembling the legendary sword held by a single hair, as depicted in the story. The device was tethered to a computer and had a display positioned in front of the wearer's eyes, providing a primitive form of augmented reality.
+Server-Side Development: Node.js is commonly used for server-side development, including building web servers, RESTful APIs, microservices, and server-side rendering for web applications.
 
-The display in the Sword of Damocles was monochrome and could render simple wireframe graphics. Despite its basic capabilities by today's standards, it was groundbreaking at the time and laid the foundation for future advancements in virtual and augmented reality technologies.
+JavaScript Ecosystem: Node.js enables developers to use JavaScript for both client-side and server-side development, providing a unified language and ecosystem across the entire application stack.
 
-Sutherland's work with the Sword of Damocles marked a significant milestone in the development of HMDs and virtual reality, paving the way for the immersive experiences we see today.
-![Image Description](Pictures/Week1_Slide2.JPG)
+### npm
+npm (Node Package Manager) is a command-line tool used for managing Node.js packages and dependencies. It comes bundled with Node.js installation and provides a convenient way to install, update, and remove packages from a Node.js project. npm allows developers to specify dependencies in a package.json file and automatically installs them along with their dependencies, simplifying the process of managing project dependencies and ensuring consistent development environments across different machines.
+Songjia just says its a way to get your packages into your projecct
 
-#### Eyephone + DataGlove
-EyePhone: The term "EyePhone" likely refers to a device related to vision or eye interaction. It could have been a component of Jaron Lanier's early virtual reality systems, perhaps involving visual display or tracking technology.
 
-DataGlove: As mentioned earlier, the "DataGlove" is a glove-like device equipped with sensors to track hand and finger movements. It enables users to interact with virtual environments or control computer applications through gestures.
+As a Babylon.js user, understanding Node.js and npm is important for several reasons:
 
-Virtual Reality: The term "Virtual Reality" refers to computer-generated environments that simulate physical presence in real or imagined worlds. Lanier and his team at VPL Research were instrumental in popularizing and advancing the concept of virtual reality during the late 1980s and early 1990s.
-![Image Description](Pictures/Week1_Slide3.JPG)
+Development Workflow: Node.js and npm facilitate a streamlined development workflow for Babylon.js projects. You can use npm to manage dependencies, including Babylon.js itself and any additional libraries or tools you may need for your project.
 
-#### Virutality 1000
-Virtuality 1000 was a virtual reality (VR) system developed by Virtuality Group plc in the early 1990s. It was one of the first commercial VR systems designed for arcades and entertainment venues, offering immersive gaming experiences to the public.
+Third-Party Libraries: Babylon.js is often used alongside other JavaScript libraries and frameworks to enhance functionality or simplify development tasks. npm provides access to a vast ecosystem of third-party libraries and packages that you can easily integrate into your Babylon.js projects.
 
-Here are some key features and aspects of the Virtuality 1000 system:
+Build Tools: Node.js and npm offer various build tools and utilities that can help optimize and automate your Babylon.js project's development process. For example, you can use npm scripts to automate tasks such as bundling, minification, testing, and deployment.
 
-Hardware: The Virtuality 1000 system consisted of VR headsets, handheld controllers, and a central processing unit (CPU). The headsets provided stereoscopic 3D visuals and head tracking, allowing users to look around and interact with virtual environments. The handheld controllers enabled users to manipulate objects and navigate within the virtual world.
+Server-Side Rendering: Node.js enables server-side rendering (SSR) of Babylon.js applications, allowing you to pre-render 3D scenes on the server and deliver them to clients for improved performance and SEO (Search Engine Optimization).
 
-Games and Experiences: Virtuality 1000 offered a variety of games and experiences designed to showcase the capabilities of VR technology. These experiences ranged from immersive games, such as first-person shooters and racing simulations, to virtual tours and educational applications.
+Community and Support: Node.js and npm have large and active communities of developers who contribute to open-source projects, share knowledge, and provide support. Being familiar with Node.js and npm allows you to tap into this community for assistance, resources, and collaboration.
 
-Arcade Installations: The Virtuality 1000 system was primarily installed in arcades, entertainment centers, and amusement parks. Players could pay to experience VR games and attractions, making it a popular destination for gaming enthusiasts and curious visitors alike.
+Full-Stack Development: With Node.js, you can build full-stack applications that combine server-side logic written in JavaScript with client-side Babylon.js code. This allows for a unified development experience and easier integration between the frontend and backend components of your application.
 
-Popularity and Impact: Virtuality 1000 helped popularize VR technology in the early 1990s and introduced many people to the concept of immersive virtual experiences. While the system was innovative for its time, it faced challenges such as high costs, limited content, and technical limitations compared to modern VR systems.
+Overall, understanding Node.js and npm enhances your capabilities as a Babylon.js user, enabling you to leverage a wider range of tools, libraries, and resources to build immersive 3D experiences more efficiently and effectively.
 
-Legacy: Despite its limitations, Virtuality 1000 played a significant role in laying the groundwork for the modern VR industry. It demonstrated the potential of VR technology for entertainment and gaming, inspiring future advancements and innovations in the field.
+Commands
+npm init - Creates a package.json
+npm init --yes - Does the same above but answers every single questions that npm ask with yes
+npm vite@latest - installs vite
 
-Overall, Virtuality 1000 was an early example of commercial VR technology that provided users with immersive gaming experiences and helped pave the way for the development of modern virtual reality systems.
+### package.json
+package.json is a file used in Node.js projects to manage project dependencies, scripts, metadata, and other configuration settings. It is a standard file in Node.js projects and is typically located in the root directory of the project. Here's what you'll commonly find in a package.json file:
 
-#### Sega VR
-Sega VR, also known as Sega Virtual Reality, was an ambitious virtual reality gaming headset developed by Sega during the early 1990s. Sega, a prominent player in the video game industry, aimed to capitalize on the emerging interest in virtual reality technology with this project. However, the Sega VR headset never made it to the commercial market, and its development was ultimately canceled before it could reach consumers. Here are some key points about the Sega VR:
+Project Metadata: Information about the project such as its name, version, description, author, license, etc. This metadata helps other developers understand the purpose and characteristics of the project.
 
-Development: The development of Sega VR began in the early 1990s as Sega sought to innovate and expand its gaming offerings. The headset was intended to provide players with immersive virtual reality experiences, allowing them to step into the game world like never before.
+Dependencies: Lists of packages or modules that the project depends on for its functionality. Dependencies can be categorized into two types: dependencies and devDependencies. Dependencies listed under dependencies are required for the application to run, while those under devDependencies are only needed for development purposes.
 
-Features: The Sega VR headset featured stereoscopic 3D visuals and head tracking technology, similar to other VR systems of the time. Players could wear the headset to enter virtual environments and interact with games using their head movements.
+Scripts: Custom scripts that can be executed using the npm or yarn command line interface. These scripts can perform various tasks such as running tests, building the project, starting the development server, etc. Common script names include start, test, build, dev, etc.
 
-Games: Several games were reportedly in development for the Sega VR headset, including titles like "Nuclear Rush" and "Iron Hammer." These games were designed to showcase the capabilities of the VR technology and provide players with unique and immersive gaming experiences.
+Version Control: Information related to version control systems such as Git repositories, including URLs for remote repositories, branch information, etc.
 
-Cancellation: Despite its promising technology and potential, the Sega VR project faced numerous challenges during development. Issues such as technical limitations, high costs, and concerns about motion sickness and health risks contributed to the cancellation of the project. Sega ultimately decided to abandon the Sega VR headset before it could be released to the public.
+Configuration Settings: Additional configuration settings specific to the project or its dependencies. These settings can include options for compilers, linters, bundlers, test frameworks, etc.
+```
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A sample Node.js project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "sample",
+    "project"
+  ],
+  "author": "John Doe",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
 
-Legacy: Although the Sega VR headset never reached consumers, its development reflects the early excitement and experimentation surrounding virtual reality technology in the gaming industry. The project's cancellation also underscores the significant technical and logistical challenges involved in bringing VR hardware to market during the early 1990s.
+```
 
-Overall, Sega VR remains an intriguing footnote in the history of virtual reality gaming, showcasing both the potential and the pitfalls of early attempts to bring immersive VR experiences to the mass market.
+### package lock.json
+package-lock.json is a file generated by npm (Node Package Manager) when you run npm install to install dependencies for a Node.js project. It serves as a lockfile that records the exact versions of all packages and their dependencies that were installed. This ensures that subsequent installs of the project, whether by the same developer or by others, will use the exact same versions of dependencies, thus guaranteeing reproducibility and consistency across different environments.
 
-#### Sega VR-1
-Sega VR-1 was a virtual reality attraction located within Segaworld, an entertainment complex operated by Sega. Segaworld locations were situated in various cities around the world, offering arcade-style gaming experiences and attractions.
+Here's what package-lock.json typically contains:
 
-The Sega VR-1 attraction provided visitors with the opportunity to experience virtual reality gaming using advanced VR technology for its time. Players would don a VR headset and step into immersive virtual environments, where they could engage in various games and experiences.
+Dependency Tree: The file contains a detailed dependency tree, listing all the packages that were installed, along with their versions. It records both direct dependencies (those listed in your package.json) and their transitive dependencies.
 
-While the specifics of the games and experiences offered at Sega VR-1 may vary depending on the location and timeframe, it's likely that they included immersive simulations, interactive experiences, and possibly even multiplayer VR gaming.
+Exact Versions: For each package, package-lock.json specifies the exact version that was installed, including any sub-dependencies. This prevents npm from installing different versions of the same package in different environments, which could lead to compatibility issues.
 
-Sega VR-1 was part of Sega's efforts to showcase the potential of virtual reality gaming and provide visitors with cutting-edge entertainment experiences. However, as with many early VR ventures, the technology and experiences offered may have been relatively basic compared to modern VR systems.
+Integrity Hashes: package-lock.json includes integrity hashes for each package, which are cryptographic hashes computed from the package's contents. These hashes ensure that the installed packages have not been tampered with or corrupted.
 
-It's worth noting that Segaworld locations and attractions, including Sega VR-1, have largely disappeared over the years, with the last Segaworld location closing in the early 2000s. Nonetheless, Sega VR-1 represents an early attempt by Sega to incorporate virtual reality into its arcade offerings, reflecting the company's interest in exploring new gaming technologies and experiences.
-(Chatgpt could not give much information about this)
-![Image Description](Pictures/Week1_Slide4.JPG)
+Metadata: Additional metadata such as URLs for package tarballs, version ranges, and other information necessary for installing and resolving dependencies.
 
-#### Nintendo Virtual Boy
-The Nintendo Virtual Boy was a unique and pioneering gaming console released by Nintendo in 1995. It was notable for being one of the first gaming systems to offer 3D stereoscopic graphics, though it was ultimately a commercial failure. Here are some key points about the Virtual Boy:
+The presence of package-lock.json is particularly important in collaborative projects or when deploying applications to production environments. It helps ensure that all developers working on the project are using the same versions of dependencies and reduces the likelihood of unexpected behavior due to version mismatches.
 
-Hardware: The Virtual Boy consisted of a tabletop console with a built-in red LED display and a controller. Unlike traditional handheld consoles, users had to place their heads into a visor-like headset to view the games in 3D. The display technology used red LEDs to create a stereoscopic effect, but it only displayed graphics in monochrome red.
+It's worth noting that package-lock.json should be committed to version control along with your other project files (package.json, source code, etc.) to ensure that everyone working on the project has access to the same dependency versions. However, it's generally recommended to exclude the node_modules directory from version control, as the dependencies themselves can be quite large and are better managed through npm or yarn.
 
-Games: The Virtual Boy had a library of around 22 games, including titles like "Mario's Tennis," "Wario Land," and "Virtual Boy Wario Land." However, due to the system's limitations and commercial failure, the library remained relatively small compared to other Nintendo consoles.
+### index.html
 
-Commercial Failure: Despite its innovative technology, the Virtual Boy was a commercial failure. Several factors contributed to its lack of success, including its high price, limited game library, uncomfortable design, and health concerns related to prolonged use. Additionally, the red monochrome display caused eye strain and headaches for many users.
+index.html is a commonly used filename for the main HTML file in a web application or website. It serves as the entry point for the web application and typically contains the structure and content of the initial page that users see when they visit the website.
 
-Discontinuation: Nintendo discontinued the Virtual Boy less than a year after its release, with production ending in 1996. The console was a commercial disappointment for Nintendo, resulting in poor sales and financial losses.
+The index.html file often includes the following components:
 
-Legacy: While the Virtual Boy was not successful during its initial release, it has gained a cult following among retro gaming enthusiasts and collectors. Its unique design and pioneering use of 3D technology have contributed to its status as a collector's item. Some of the games released for the Virtual Boy have also been praised for their gameplay and innovation.
+HTML Structure: The basic structure of an HTML document, including the <html>, <head>, and <body> tags.
 
-In summary, the Nintendo Virtual Boy was an ambitious but ultimately unsuccessful attempt by Nintendo to introduce 3D gaming to the mass market. Despite its commercial failure, it remains an interesting footnote in the history of gaming technology and an example of Nintendo's willingness to take risks and innovate in the gaming industry.
-![Image Description](Pictures/Week1_Slide5.JPG)
+Metadata: Metadata elements such as <meta> tags for specifying character encoding, viewport settings, authorship information, and other metadata that browsers and search engines use to interpret and display the page correctly.
 
+Title: The <title> element, which specifies the title of the web page displayed in the browser's title bar or tab.
 
-#### E Magin Z800 3D Visor
-The eMagin Z800 3D Visor was a head-mounted display (HMD) developed by eMagin Corporation, a company specializing in OLED microdisplays. The Z800 3D Visor was introduced in the mid-2000s and aimed to provide users with immersive 3D experiences for gaming, entertainment, and professional applications. Here are some key features and aspects of the eMagin Z800 3D Visor:
+Content: The main content of the web page, including text, images, links, forms, and other HTML elements that make up the user interface of the website.
 
-Display Technology: The Z800 3D Visor utilized OLED (Organic Light-Emitting Diode) microdisplays to provide high-resolution visuals to the wearer. OLED displays offer several advantages, including high contrast ratios, fast response times, and vibrant colors, which contribute to a more immersive viewing experience.
+Script and Style References: References to external JavaScript files (<script> tags) and CSS stylesheets (<link> tags) used to add functionality and styling to the web page.
 
-Head-Mounted Design: The Z800 3D Visor featured a head-mounted design, allowing users to wear the device comfortably and securely. The visor-style form factor provided a hands-free experience, freeing users to interact with their environment while wearing the HMD.
+JavaScript Code: Inline JavaScript code or script blocks within the <script> tags for adding interactivity, event handling, and dynamic behavior to the web page.
 
-Stereo 3D Capability: One of the primary features of the Z800 3D Visor was its stereo 3D capability, which enabled users to perceive depth and immersion in virtual environments. The HMD used separate displays for each eye to create a stereoscopic effect, enhancing the realism of 3D content.
+The index.html file is often located in the root directory of a web project and is served by the web server as the default document when users access the website's domain or root URL (e.g., http://example.com).
 
-Wide Field of View: The Z800 3D Visor offered a relatively wide field of view (FOV), allowing users to perceive a large portion of the virtual environment. A wider FOV enhances immersion by providing a more expansive view of the virtual world, reducing the sense of restriction or limitation.
+In summary, index.html is the main HTML file of a web application or website, containing the structure and content of the initial page that users see when they visit the site. It plays a crucial role in defining the user interface and functionality of the web application.
 
-Applications: The eMagin Z800 3D Visor was marketed for a variety of applications, including gaming, simulation, training, and professional visualization. It was used by gamers seeking immersive gaming experiences, professionals in fields such as engineering and design for visualization and prototyping, and enthusiasts interested in exploring virtual environments.
+For babylon js, since the application is hosted on the web, treat the html as how the app will look like. Its like making a website where you add elements to the html page and then you see ui elements appear
 
-Success and Impact: While the eMagin Z800 3D Visor garnered attention for its advanced display technology and immersive capabilities, it did not achieve mainstream success on the scale of consumer products like gaming consoles or smartphones. However, it played a role in advancing the development of HMD technology and contributed to the growing interest in virtual and augmented reality applications.
-![Image Description](Pictures/Week1_Slide6.JPG)
+### tsconfig.json
 
-#### Occulus Rift DK1
-The Oculus Rift DK1 (Development Kit 1) was one of the earliest versions of the Oculus Rift, a virtual reality (VR) headset developed by Oculus VR, which was later acquired by Facebook. The DK1 was designed primarily for developers to create and test VR content during the early stages of the consumer VR industry. Here are some key features and aspects of the Oculus Rift DK1:
+A tsconfig.json file is a configuration file used in TypeScript projects to specify compiler options and settings for the TypeScript compiler (tsc). This file helps manage various aspects of the TypeScript project, such as compiler behavior, output directory, module resolution, and more.
 
-Release Date: The Oculus Rift DK1 was announced in 2012, and the first development kits were shipped to Kickstarter backers and developers in March 2013. It was the first publicly available version of the Oculus Rift headset.
+Here are some common settings that can be configured in a tsconfig.json file:
 
-Display: The DK1 featured a 7-inch display with a resolution of 1280x800 pixels, providing stereoscopic 3D visuals to the wearer. While the resolution was relatively low compared to modern VR headsets, it was a significant improvement over previous VR prototypes.
+Compiler Options: Compiler options control how TypeScript code is compiled into JavaScript. These options include settings such as target ECMAScript version, module system (e.g., CommonJS, AMD, ES6), strict type checking, source map generation, and more.
 
-Field of View (FOV): The DK1 offered a field of view (FOV) of approximately 110 degrees diagonal, allowing users to perceive a wide view of the virtual environment. A wider FOV enhances immersion by providing a more expansive and natural view of the virtual world.
+File Inclusion/Exclusion: Specify which files should be included or excluded from compilation. You can use the include and exclude properties to specify file paths or glob patterns to include or exclude files from compilation.
 
-Head Tracking: The DK1 was equipped with head-tracking technology that allowed users to move their heads and have those movements reflected in the virtual environment in real-time. This feature enabled more natural and intuitive interaction with VR content.
+Output Options: Configure the output directory and file naming conventions for compiled JavaScript files. Options include setting the output directory (outDir), generating declaration files (declaration), emitting ECMAScript modules (esModuleInterop), and more.
 
-Development Kit: As the name suggests, the Oculus Rift DK1 was primarily intended for developers to create and test VR experiences. It provided developers with early access to VR hardware and software development tools, allowing them to experiment with new ideas and concepts for VR content.
+Module Resolution: Configure how TypeScript resolves module imports. Options include specifying module resolution strategy (moduleResolution), root directories for module resolution (baseUrl), path mappings (paths), and more.
 
-Community and Feedback: The release of the DK1 sparked widespread interest and excitement in the emerging VR industry. Developers and enthusiasts around the world began creating and sharing VR experiences, contributing to the growth of the VR ecosystem. Feedback from DK1 users also helped Oculus VR refine and improve subsequent iterations of the Oculus Rift.
+Type Checking Options: Control the strictness of type checking and error reporting. Options include enabling strict mode (strict), enforcing null checks (strictNullChecks), enabling strict property initialization (strictPropertyInitialization), and more.
 
-Successor: The Oculus Rift DK1 was succeeded by the Oculus Rift Development Kit 2 (DK2), which featured improvements in display resolution, refresh rate, and tracking accuracy. The DK2 was followed by the release of consumer versions of the Oculus Rift, marking the beginning of widespread adoption of VR technology.
+Source Map Generation: Specify whether to generate source maps for compiled JavaScript files (sourceMap) and configure source map options.
 
-Overall, the Oculus Rift DK1 played a crucial role in kickstarting the modern VR industry by providing developers with early access to VR hardware and tools. It laid the foundation for subsequent advancements in VR technology and content creation, ultimately leading to the widespread availability of consumer VR headsets.
+Project References: Define references to other TypeScript projects or projects' outputs. This feature allows you to create multi-project setups and manage dependencies between projects.
 
-The price of the DK1 costs USD300
-![Image Description](Pictures/Week1_Slide7.JPG)
+A tsconfig.json file is typically located in the root directory of a TypeScript project, and TypeScript automatically detects and uses this file when compiling the project. Having a tsconfig.json file helps ensure consistent compilation settings across different environments and simplifies project setup and maintenance.
 
-#### Google Cardboard
-Google Cardboard is a simple and affordable virtual reality (VR) platform developed by Google. It consists of a fold-out cardboard viewer into which a smartphone can be inserted. When used with compatible apps, the smartphone's screen acts as the display, and the Cardboard viewer provides the lenses and structure to create a basic VR experience. Here are some key points about Google Cardboard:
+Here's a minimal example of a tsconfig.json file:
+```
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
 
-Origins: Google Cardboard was first introduced by Google at the Google I/O developer conference in June 2014. It was initially conceived as an accessible and low-cost way to bring VR experiences to a wider audience.
+### Vite
+First install vite in your project
+npm vite@latest - installs vite
 
-Design: The Google Cardboard viewer is made of cardboard (hence the name) and features lenses, a flap that folds down to hold a smartphone, and a button or magnet on the side that interacts with the smartphone's screen. The viewer is designed to be lightweight, portable, and easy to assemble.
+Next install dependencies
+npm i
 
-Smartphone Compatibility: Google Cardboard works with a wide range of Android and iOS smartphones that meet the minimum screen size requirements. Users simply need to download the Cardboard app from the Google Play Store or the Apple App Store to get started.
+This songjia cant really make any sense on why the dependencies was not already installed but oh well
 
-VR Experiences: Google Cardboard offers access to a variety of VR experiences and apps available through the Cardboard app or other third-party platforms. These experiences range from immersive games and simulations to educational content, virtual tours, and more.
+To run project
+run dev
 
-Open Source: Google Cardboard is an open-source platform, which means that the design specifications and software development kits (SDKs) are freely available for developers to use and modify. This openness has contributed to the widespread adoption and development of Cardboard-compatible apps and experiences.
+Install babylon js
+npm i babylonjs@core
 
-Popularity and Adoption: Google Cardboard quickly gained popularity due to its affordability and accessibility. It has been used in various educational settings, marketing campaigns, and entertainment experiences. Google has also released updated versions of Cardboard and worked with partners to create customized Cardboard viewers.
+The beginning code is like this
+```
+// main.ts
+import { Engine } from "@babylonjs/core";
+import { App } from "./app";
 
-Impact: While Google Cardboard may not offer the same level of immersion or functionality as higher-end VR systems like the Oculus Rift or HTC Vive, it has played a significant role in democratizing VR technology and making it more accessible to the general public. It has also served as a valuable entry point for developers interested in creating VR content.
+const canvas = document.getElementById("renderCanvas") as HTMLCanvasElement;
+const engine = new Engine(canvas, true);
+const app = new App(engine);
 
-Overall, Google Cardboard represents an innovative and inclusive approach to virtual reality, demonstrating how a simple and inexpensive viewer can unlock immersive experiences for millions of users worldwide.
-![Image Description](Pictures/Week1_Slide8.JPG)
+const scenePromise = app.createScene();
+scenePromise.then((scene) => {
+  engine.runRenderLoop(() => {
+    scene.render();
+  });
+});
 
-# All the other VR
+// app.ts
+import { Engine, Scene } from "@babylonjs/core";
 
-The image appears to be a continuation of the previous one, showing a timeline of virtual reality (VR) headsets and their progression over the years.
+export class App {
+  private engine: Engine;
 
-On the left side, there's text denoting significant years and the corresponding VR headsets released:
+  constructor(engine: Engine) {
+    this.engine = engine;
+  }
 
-2015: Samsung Gear VR
-2016: HTC Vive, Oculus Rift, PlayStation VR
-These were all major VR headsets released in those years, marking significant developments in consumer VR technology.
+  async createScene(): Promise<Scene> {
+    const scene = new Scene(this.engine);
+    return scene;
+  }
+}
 
-The Samsung Gear VR was a mobile VR headset developed in collaboration with Oculus. It used a Samsung Galaxy smartphone as the display and processor.
 
-In 2016, several high-profile VR systems were released:
+```
+There was a index.html file earlier right, in that file, sonjia added a canvas file to the html and in the main.ts, he gets the canvas. The result is when he loads the web host, you will see a black image representing the canvas
 
-HTC Vive: Developed by HTC and Valve Corporation, known for its room-scale VR capabilities that allow the user to move around in a virtual space.
-Oculus Rift: One of the first successful consumer-facing PC-based VR headsets, developed by Oculus VR, a division of Facebook Inc.
-PlayStation VR: Sony's VR headset for the PlayStation 4 gaming console, making VR more accessible to console gamers.
-![Image Description](Pictures/Week1_Slide9.JPG)
 
-### Definitions
-#### What is XR
-Chatgpt says:
-"XR" stands for Extended Reality, and it's an umbrella term that covers various forms of computer-altered reality, including:
-
-Virtual Reality (VR): This technology immerses users in a fully artificial digital environment. VR requires the use of headsets that take over your vision to give you the impression that you're somewhere else.
-
-Augmented Reality (AR): AR overlays digital content on the real world through either a display device like a smartphone or smart glasses. It doesn't replace the real world with a virtual one; it adds to it with images, sounds, and other virtual enhancements.
-
-Mixed Reality (MR): MR combines elements of both AR and VR, real-world and digital objects interact. Mixed Reality can be experienced through a headset or on next-generation computing devices, providing the ability to see and immerse yourself in the world around you even as you interact with a virtual environment using your own hands—all without ever removing your headset. It is sometimes considered an advanced form of AR.
-
-XR technologies are used in various applications like gaming, education, healthcare, military, and many other fields. They offer immersive experiences and are being explored for their potential to provide training, enhance the user experience, and improve productivity in various industries.
-![Image Description](Pictures/Week1_Slide10.JPG)
-![Image Description](Pictures/Week1_Slide14.JPG)
-
-### Immersification Continuum
-No idea what this is 
-![Image Description](Pictures/Week1_Slide11.JPG)
-
-### Milgram Kishino RV Continuum
-The Milgram-Kishino Virtuality Continuum, often referred to simply as the "Virtuality Continuum," is a conceptual framework proposed by Paul Milgram and Fumio Kishino in 1994. This continuum categorizes reality and virtuality into a spectrum ranging from the physical world to fully immersive virtual environments. It aims to provide a framework for understanding and categorizing different types of environments based on their level of virtuality and the degree of presence experienced by users. Here's an overview of the Virtuality Continuum:
-
-Physical Reality (Physical World): At one end of the continuum is physical reality, which represents the real-world environment that we perceive through our senses. This includes the tangible physical objects, spaces, and interactions that we experience in the physical world.
-
-Augmented Reality (AR): Moving along the continuum, augmented reality (AR) overlays virtual content onto the physical environment, enhancing or augmenting the user's perception of reality. AR technology integrates digital information, such as images, text, or 3D models, with the user's view of the real world in real-time.
-
-Augmented Virtuality (AV): Augmented virtuality represents environments where physical elements are integrated into a predominantly virtual environment. In AV, virtual content is the primary focus, but elements of the physical world are incorporated to enhance the virtual experience. An example of AV might be a virtual training simulation where physical objects or props are used alongside virtual environments.
-
-Virtual Reality (VR): Further along the continuum is virtual reality (VR), where users are fully immersed in a simulated environment that is entirely computer-generated. VR technology typically involves head-mounted displays (HMDs) and other sensory input devices to create a sense of presence and immersion within the virtual environment.
-
-Mixed Reality (MR) and Extended Reality (XR): Mixed reality (MR) and extended reality (XR) are terms that encompass a spectrum of environments that combine elements of both the physical and virtual worlds. These terms are often used interchangeably to refer to environments where virtual and physical elements coexist and interact in real-time, providing users with varying levels of immersion and presence.
-
-The Virtuality Continuum provides a useful framework for understanding the relationship between different types of environments based on their level of virtuality and the degree of immersion experienced by users. It acknowledges that the boundaries between physical reality, augmented reality, and virtual reality are fluid and that technologies such as AR, VR, MR, and XR can blend these elements in diverse and innovative ways.
-![Image Description](Pictures/Week1_MilgramKishino.png)
-
-### RV Continuum and IM Continuum
-Extent of World Knowledge (EWK) Continuum: This measures how much of the real world is modeled in the system. It goes from no real-world modeling to a fully detailed virtual model of the real world.
-
-Reproduction Fidelity (RF) Continuum: This scale assesses the quality of the virtual content's reproduction, ranging from no virtual content to a level where real and virtual content are indistinguishable.
-
-Extent of Presence Metaphor (EPM) Continuum: This measures the degree to which the system allows user interaction, from no display to fully immersive environments where virtual interactions are indistinguishable from direct viewing and interaction in the real world.
-![Image Description](Pictures/Week1_Slide12.JPG)
-![Image Description](Pictures/Week1_Slide13.JPG)
-
-### Mentimeter Questions
-![Image Description](Pictures/Week1_Slide15.JPG)
-![Image Description](Pictures/Week1_Slide16.JPG)
-![Image Description](Pictures/Week1_Slide17.JPG)
-![Image Description](Pictures/Week1_Slide18.JPG)
-![Image Description](Pictures/Week1_Slide19.JPG)
-![Image Description](Pictures/Week1_Slide20.JPG)
-![Image Description](Pictures/Week1_Slide21.JPG)
-![Image Description](Pictures/Week1_Slide22.JPG)
-![Image Description](Pictures/Week1_Slide23.JPG)

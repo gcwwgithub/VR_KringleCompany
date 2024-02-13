@@ -267,6 +267,49 @@ This line creates an advanced dynamic texture associated with the plane mesh. Ad
 ```helloTexture.addControl(helloText);```
 This adds the TextBlock element (containing the text 'Hello XR') to the advanced dynamic texture associated with the plane mesh. As a result, the text will be rendered onto the plane mesh in the 3D scene.
 
+### GUI Controls?
+```
+createText(scene: Scene) {
+  const helloPlane = MeshBuilder.CreatePlane("hello plane", { width: 2.5, height: 1 }, scene);
+  helloPlane.position.y = 0;
+  helloPlane.position.z = 5;
+  
+  const helloTexture = AdvancedDynamicTexture.CreateForMesh(helloPlane, 250, 100, false);
+  helloTexture.background = "white";
+
+  const helloText = new TextBlock("hello");
+  helloText.text = "Hello XR";
+  helloText.color = "purple";
+  helloText.fontSize = 50;
+
+  helloTexture.addControl(helloText);
+}
+```
+The function provided is a basic example of how to create simple GUI (Graphical User Interface) controls in a Babylon.js 3D scene. Here's how it aligns with GUI creation:
+
+AdvancedDynamicTexture: This is a special kind of texture that allows you to overlay GUI elements on top of a 3D scene or attach them to a specific mesh, like the plane in this case. This texture acts as a canvas for GUI controls.
+
+TextBlock: This is a GUI control for displaying text. It's a fundamental element in any GUI system and can be used for labels, buttons, or any interactive text element.
+
+Adding the TextBlock to the Texture: The helloTexture.addControl(helloText); line adds the TextBlock to the AdvancedDynamicTexture, which means the text will appear on the plane in the 3D world.
+
+This setup is indeed a simple example of GUI in a 3D application. Babylon.js also supports more complex GUI elements, such as buttons, sliders, input fields, etc., which can be layered together to create a rich user interface. The GUI in Babylon.js is particularly useful for VR or AR scenarios where traditional HTML-based interfaces may not be suitable.
+
+The code is the same above with slight differences. In essence, the main functional difference is the size of the plane and the specified dimensions for the AdvancedDynamicTexture in the second snippet, which are not provided in the first. The explicit background color set for the texture in the second snippet is also a notable difference, as it changes the visual appearance of the text's backdrop.
+
+### GUI Interactions
+```
+helloText.onPointerUpObservable.add(eventData => {
+  alert('Hello Text at:\n X: ' + eventData.x + '\n Y: ' + eventData.y);
+});
+
+helloText.onPointerDownObservable.add(() => {
+  this.sound.play();
+});
+```
+The first one adds an event listener to the onPointerUpObservable of the helloText TextBlock. When the pointer (usually a mouse or touch input) is released over the text block, the provided callback function is executed. The callback function shows a browser alert with the x and y position of the pointer when the event was triggered.
+
+The second one adds an event listener to the onPointerDownObservable of the helloText. When the pointer is pressed down over the text block, the provided callback function is executed. In this callback, this.sound.play(); is called, which implies that there is a sound property on the same context (this) where the function is defined, and its play method is invoked. Assuming this.sound refers to an audio object, this would start playing the sound.
 
 ### Create VR Experience and Async
 ```
@@ -548,5 +591,143 @@ root.scaling.setAll(1.5) uniformly scales the mesh by a factor of 1.5 along all 
 
 The difference between this and the previous snippet is that after loading the model, this code snippet is also manipulating the root mesh by setting its ID, name, position, rotation, and scale. This allows for immediate customization of the model's properties once it has been loaded into the scene. The previous snippet didn't include these post-loading operations.
 
+### Animations
+```
+createAnimation(scene: Scene, model: AbstractMesh) {
+  const animation = new Animation(
+    'rotationAnim',
+    'rotation',
+    30,
+    Animation.ANIMATIONTYPE_VECTOR3,
+    Animation.ANIMATIONLOOPMODE_CYCLE
+  );
 
+  const keyframes = [
+    { frame: 0, value: new Vector3(0, 0, 0) },
+    { frame: 30, value: new Vector3(0, 2 * Math.PI, 0) }
+  ];
+
+  animation.setKeys(keyframes);
+
+  model.animations = [];
+  model.animations.push(animation);
+
+  scene.beginAnimation(model, 0, 30, true);
+}
+```
+createAnimation is a function that takes a Scene and an AbstractMesh object as arguments. This function is likely part of a Babylon.js application, where Scene represents the 3D environment and AbstractMesh represents a mesh within that scene.
+
+An Animation object is instantiated with the name 'rotationAnim'. It is configured to animate the 'rotation' property of the mesh. The 30 specifies the frame rate, indicating how many frames per second the animation will run.
+
+Animation.ANIMATIONTYPE_VECTOR3 indicates that the property being animated, rotation in this case, is a Vector3 type, which is a three-dimensional vector representing Euler angles for rotation.
+
+Animation.ANIMATIONLOOPMODE_CYCLE sets the animation to loop continuously.
+
+The keyframes array defines the keyframes for the animation:
+
+The first keyframe at frame: 0 sets the initial rotation value to (0, 0, 0).
+The second keyframe at frame: 30 sets the rotation value to (0, 2 * Math.PI, 0), which represents a full 360-degree rotation around the Y-axis.
+animation.setKeys(keyframes); assigns the keyframes to the animation, which tells the animation object when and how to interpolate the mesh's rotation.
+
+model.animations = []; initializes the animations array property of the model to an empty array. This ensures that any previous animations are removed and the mesh is ready for new animations.
+
+model.animations.push(animation); adds the newly created animation to the model's animations array.
+
+scene.beginAnimation(model, 0, 30, true); starts the animation on the model. It specifies that the animation should start at frame 0, end at frame 30, and the true argument indicates that the animation should loop.
+
+The outcome of this code is that the mesh provided as model will rotate around the Y-axis one full turn (360 degrees) in a loop. The duration of this rotation is implicitly defined by the frame rate and the frame numbers given; since there are 30 frames and the frame rate is 30, this implies a one-second duration for the full rotation cycle.
+
+Then in load model you add this
+```
+loadModel(scene: Scene) {
+  SceneLoader.ImportMeshAsync('', 'assets/models/', 'H2O.glb', scene).then(result => {
+    const root = result.meshes[0];
+    root.id = 'h2oRoot';
+    root.name = 'h2oRoot';
+    root.position = someVariable; // 'someVariable' is not defined in this snippet. This likely should be a Vector3 object.
+    root.rotation = new Vector3(0, 0, Math.PI);
+    root.scaling.setAll(1.5);
+    this.createAnimation(scene,root)
+  });
+}
+```
+### Particle System
+```
+createParticles(scene: Scene) {
+  const particleSystem = new ParticleSystem('particles', 5000, scene);
+  particleSystem.particleTexture = new Texture('assets/textures/flare.png', scene);
+
+  particleSystem.emitter = new Vector3(0, 0, 0);
+  particleSystem.minEmitBox = new Vector3(0, 0, 0);
+  particleSystem.maxEmitBox = new Vector3(0, 0, 0);
+
+  particleSystem.color1 = new Color4(0.7, 0.8, 1.0, 1.0);
+  particleSystem.color2 = new Color4(0.3, 0.5, 1.0, 1.0);
+  particleSystem.blendMode = ParticleSystem.BLENDMODE_ONEONE;
+
+  particleSystem.minSize = 0.01;
+  particleSystem.maxSize = 0.05;
+  
+  particleSystem.minLifeTime = 0.3;
+  particleSystem.maxLifeTime = 1.5;
+  
+  particleSystem.emitRate = 1500;
+  
+  particleSystem.direction1 = new Vector3(-1, 8, -1);
+  particleSystem.direction2 = new Vector3(1, 8, -1);
+  
+  particleSystem.minEmitPower = 0.2;
+  particleSystem.maxEmitPower = 0.8;
+  particleSystem.updateSpeed = 0.01;
+  
+  particleSystem.gravity = new Vector3(0, -9.8, 0);
+  particleSystem.start();
+}
+```
+Defines a function createParticles that takes a Babylon.js Scene object as a parameter.
+
+Creates a new ParticleSystem within the provided scene. The system is named 'particles', and it's configured to use a maximum of 5000 particles.
+
+Sets the particle texture to a flare image, 'assets/textures/flare.png', which will be used for each particle in the system.
+
+Sets the emitter of the particle system to the origin point (0, 0, 0). This is the point in space where particles will be emitted.
+
+The minEmitBox and maxEmitBox are set to (0, 0, 0), which means that particles will be emitted from a single point. If these vectors were different, particles would be emitted from random positions within the defined box area.
+
+Defines two colors for the particles. color1 is a pale blue with full alpha (opaque), and color2 is a darker blue, also fully opaque. These colors will likely be interpolated between over the lifetime of the particles.
+
+Sets the blendMode to BLENDMODE_ONEONE, which defines how particles blend with the background and each other. This particular mode is additive blending, where the colors of the particles are added to the colors of the background, creating a glowing effect.
+
+minSize and maxSize set the minimum and maximum size of each particle. Particles will be randomly sized between these values when they are created.
+
+minLifeTime and maxLifeTime set the minimum and maximum lifetime of each particle in seconds. Each particle will last for a random time between these values before it's recycled.
+
+emitRate is the number of particles to emit per second.
+
+direction1 and direction2 define the initial direction vectors for particle emission. Particles will be emitted with a random direction between these two vectors. This creates a spread of particles that can simulate effects like explosions or fountains.
+
+minEmitPower and maxEmitPower define the range of speeds at which particles are emitted from the emitter.
+
+updateSpeed is the time step used to update the particle system, effectively controlling the simulation's precision and smoothness.
+
+gravity is a vector that represents the gravity applied to the particles. In this case, it's set to the Earth's gravity, pulling the particles downward along the Y-axis.
+
+start is the method that starts the particle system, causing it to begin emitting particles.
+
+### Sound
+```
+addSounds(scene: Scene) {
+  const music = new Sound("music", "assets/sounds/hello-xr.mp3", scene, null, { loop: true, autoplay: false });
+  const sound = new Sound("sound", "assets/sounds/button.mp3", scene, null);
+}
+```
+This function, addSounds, is designed to add audio to a Babylon.js scene. The function is defined to take one parameter, scene, which is a Babylon.js Scene object where the sounds will be added.
+
+Within the function:
+
+A new Sound object named "music" is created with a source file located at "assets/sounds/hello-xr.mp3". The sound is added to the scene. The fourth parameter is set to null, which means no callback is used for when the sound is ready to play. The final parameter is an options object where loop: true means the sound will play in a loop, and autoplay: false means the sound will not play automatically when created.
+
+Another Sound object named "sound" is created with a source file located at "assets/sounds/button.mp3" and added to the scene. The fourth parameter is null, and since no options object is provided, this sound will use the default settings (it will not loop and will not autoplay, assuming these are the defaults).
+
+In summary, this function initializes two sounds for the scene: one for background music that loops (but does not autoplay), and another for a button press effect (with default playback settings). These sounds can be controlled programmatically to play, stop, pause, etc., within the application.
 

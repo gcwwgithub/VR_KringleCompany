@@ -361,3 +361,192 @@ Then in the XR emulator, just change ur device into a phone
 Same as above but connect the android phone instead
 
 ### IOS Debugging
+Didnt watch hehe i swear to god if this chek test
+
+Everything below is I didnt watch video to hear the explanation cause hehe
+### Skybox
+```
+createSkybox(scene: Scene) {
+  // Create a skybox mesh
+  const skybox = MeshBuilder.CreateBox('skybox', { size: 1000 }, scene);
+
+  // Create a skybox material
+  const skyboxMaterial = new StandardMaterial('skybox-mat');
+
+  // Disable backface culling for the skybox material
+  skyboxMaterial.backFaceCulling = false;
+
+  // Set the reflection texture of the skybox material to a cube texture
+  skyboxMaterial.reflectionTexture = new CubeTexture('assets/textures/skybox', scene);
+  skyboxMaterial.reflectionTexture.coordinatesMode = Texture.SKYBOX_MODE;
+
+  // Set the diffuse and specular colors of the skybox material to black
+  skyboxMaterial.diffuseColor = new Color3(0, 0, 0);
+  skyboxMaterial.specularColor = new Color3(0, 0, 0);
+
+  // Assign the skybox material to the skybox mesh
+  skybox.material = skyboxMaterial;
+}
+```
+In webpack, there is a setting in webpack.config.js where you need to set the static variable if its there to true to use static asssets.
+Backface culling is a performance optimization that doesn't render the faces of a mesh that point away from the camera. Since the camera is inside the skybox, you want to disable backface culling to ensure all the inside faces of the cube are rendered.
+
+The diffuse and specular colors of the skybox material are set to black. In the context of a skybox, these properties are typically set to black because the skybox usually doesn't need to reflect any light or have any shiny properties, as it represents distant objects like stars or clouds.
+
+### Camera
+```
+createCamera(scene: Scene) {
+  // const camera new ArcRotateCamera('arcCamera, Math.PI/5, Math.PI/2, 5, Vector3.Zero()),
+  // scene):
+
+  const camera = new UniversalCamera("uniCamera", new Vector3(0), scene);
+  camera.attachControl(this.canvas, true);
+}
+```
+This was the code they gave. There a commented out arc rotate camera there
+The Universal Camera is a versatile camera that can be used for both touch and keyboard/mouse control schemes. The camera is given a name "uniCamera" and is initially positioned at the origin (0, 0, 0) in the 3D world.
+The ArcRotateCamera automatically rotates around a target (in this case, Vector3.Zero() which is the origin of the scene) and is controlled by three parameters:
+
+The key difference between UniversalCamera and ArcRotateCamera is their control scheme and behavior:
+
+UniversalCamera: This is similar to a free camera or first-person shooter camera. It's controlled by WASD keys for movement and mouse for looking around.
+ArcRotateCamera: This camera is automatically set to revolve around a target point and is typically controlled by dragging the mouse to rotate the camera around the target, and the mouse wheel to zoom in and out.
+Depending on the type of interaction you want in your scene, you would choose the camera type that suits your needs. UniversalCamera is good for scenarios where you want the user to freely move around the scene, while ArcRotateCamera is excellent for scenarios where you want the user to orbit around a specific object or location.
+
+### Lights
+```
+const hemisphericLight = new HemisphericLight('hemilight', new Vector3(-1, 1, 0), scene);
+hemiLight.intensity = 0.5;
+hemiLight.diffuse = new Color3(0, 0, 1);
+
+const pointLight = new PointLight("pointLight", new Vector3(0, 1.5, 2), scene);
+pointLight.intensity = 1;
+pointLight.diffuse = new Color3(1, 0, 0);
+```
+Diffuse light is the light that is scattered in all directions off the surface it hits.
+
+The HemisphericLight simulates light coming from above, much like the ambient light in the real world where the sky acts as a light source. This type of light has a direction but no specific source position. Gemini says Hemispheric lights simulate indirect lighting from the sky and ground.
+The PointLight simulates a light bulb or a point source that emits light in all directions:
+
+The Differences Between Hemispheric Light and Point Light:
+
+Direction vs. Position: Hemispheric light is defined by a direction, meaning it does not have a specific point in space it originates from. It's assumed to be infinitely far away, similar to sunlight. Point light, on the other hand, is defined by its position in space, similar to a lamp.
+
+Light Spread: Hemispheric light illuminates the scene uniformly and simulates a soft ambient effect that doesn't cast strong shadows. Point light emits light in all directions from its position and can cast shadows based on its relationship to objects in the scene.
+
+Color: In this particular code, hemispheric light is given a blue diffuse color, which will tint the surfaces it illuminates with a blueish tone, while the point light is given a red diffuse color, which will tint illuminated surfaces red.
+
+### Sky Dome 
+```
+createVideoSkyDome(scene: Scene) {
+  const dome = new VideoDome(
+    'videoDome',
+    'assets/videos/bridge_360.mp4',
+    {
+      resolution: 32,
+      size: 1000
+    },
+    scene
+  );
+}
+```
+Inside the function, it creates an instance of VideoDome, which is likely a class from Babylon.js or a custom class in the application. VideoDome is used to project a 360-degree video onto the inner surface of a dome that surrounds the entire scene, creating an immersive environment.
+
+This one is Chatgpt say one ah
+The object { resolution: 32, size: 1000 } sets the properties for the VideoDome:
+resolution: 32 might refer to the number of segments used to render the dome, affecting the quality of the mesh onto which the video is projected.
+size: 1000 likely sets the size of the dome in the scene's units.
+
+### Inspector Shortcut
+addInspectorKeyboardShortcut(scene: Scene) {
+  window.addEventListener('keydown', e => {
+    if (e.altKey && e.ctrlKey && e.key === 'I') {
+      if (scene.debugLayer.isVisible()) {
+        scene.debugLayer.hide();
+      } else {
+        scene.debugLayer.show();
+      }
+    }
+  });
+}
+It defines an event listener that listens for keydown events on the window object.
+When a key is pressed, it checks if the Alt key and Ctrl key are held down simultaneously, and the letter 'I' is the key that was pressed. This combination (Ctrl+Alt+I) acts as the shortcut to trigger the code block.
+Inside the if-statement, it checks whether the debug layer of the scene is currently visible.
+If the debug layer is visible, it will hide it by calling scene.debugLayer.hide().
+If the debug layer is not visible, it will show it by calling scene.debugLayer.show().
+Whats the debug layer?
+In Babylon.js, the "scene debug layer", also commonly referred to as The Inspector, is a powerful visual debugging tool. It provides you with various functionalities to help you understand and troubleshoot your 3D scene. 
+
+### Make the VE Responsive to Window Sizes
+```
+window.addEventListener('resize', () => {
+  engine.resize();
+});
+```
+This code snippet is adding an event listener to the window object, which listens for the resize event. This event is triggered whenever the browser window is resized.
+
+How it's used:
+
+The anonymous arrow function () => { engine.resize(); } is the event handler that gets called when the resize event occurs.
+Inside the event handler, the resize method of the engine object is called. This method is typically provided by 3D engine libraries like Babylon.js or Three.js to handle the resizing of the rendering canvas. When the window is resized, the canvas needs to adjust its dimensions accordingly to ensure the 3D content is rendered correctly to the new window size.
+When this event is called:
+
+The resize event is called by the browser every time there is a change in the size of the viewport, which could happen for various reasons like changing the size of the browser window, rotating a mobile device, or when the browser window is maximized or minimized.
+The purpose of calling engine.resize() is to make sure that the 3D scene's aspect ratio remains correct and that the scene does not get stretched or squished. It ensures that the rendering engine adjusts its internal projections to accommodate the new size of the canvas.
+
+### Load Models
+```
+loadModel(scene: Scene) {
+  SceneLoader.ImportMeshAsync('', 'assets/models/', 'H2O.glb', scene);
+}
+```
+Here's what the function does:
+
+SceneLoader is a static class in Babylon.js that provides functions to load scenes and meshes from various file formats.
+
+ImportMeshAsync is a method that loads meshes, geometries, and materials defined in a .glb file format (which is the binary version of the GLTF format) into the provided scene.
+
+The first argument is a blank string which means no specific mesh names are provided; thus, it will load all meshes from the file.
+
+'assets/models/' is the directory path where the .glb file is located.
+
+'H2O.glb' is the name of the 3D model file that will be loaded.
+
+scene is the instance of the scene where the meshes will be added.
+
+This function would be used to load a model named 'H2O.glb' from the 'assets/models/' directory into the provided Babylon.js scene. The loading is asynchronous, which means it won't block the rest of the code from running while the model is being loaded. This is typically desired behavior in web applications to maintain a responsive interface.
+
+Once the promise returned by ImportMeshAsync is resolved, the loaded meshes will be present in the scene and can be manipulated or displayed according to the needs of the application.
+
+**You need to add ts-loader in package.json and import bablyonjs-loaders in the ts files.**
+
+### Tips on Async again?
+```
+loadModel(scene: Scene) {
+  SceneLoader.ImportMeshAsync('', 'assets/models/', 'H2O.glb', scene).then(result => {
+    const root = result.meshes[0];
+    root.id = 'h2oRoot';
+    root.name = 'h2oRoot';
+    root.position = someVariable; // 'someVariable' is not defined in this snippet. This likely should be a Vector3 object.
+    root.rotation = new Vector3(0, 0, Math.PI);
+    root.scaling.setAll(1.5);
+  });
+}
+```
+This function loadModel is similar to the previous one in that it imports a 3D model into the given scene. However, this version of the function adds more steps after the model is loaded:
+
+It uses .then on the promise returned by ImportMeshAsync to handle the result of the asynchronous operation. This part of the code will execute once the model has finished loading.
+result.meshes[0] gets the first mesh from the loaded model. In the context of Babylon.js, a model can consist of one or several meshes. Here we assume that result.meshes[0] is the root mesh or the main mesh that other parts of the model are parented to.
+
+The root mesh is given an ID and a name 'h2oRoot', which can be used to identify it within the scene.
+
+root.position is being set to someVariable, which appears to be a placeholder for a Vector3 object representing the position where the mesh should be placed in the scene. Since someVariable isn't defined in the code snippet, it should be replaced with an actual Vector3 value or variable.
+
+root.rotation is set to a new Vector3 object that represents the rotation of the mesh. In this case, it's rotated by Math.PI radians (180 degrees) around the Z-axis.
+
+root.scaling.setAll(1.5) uniformly scales the mesh by a factor of 1.5 along all three axes.
+
+The difference between this and the previous snippet is that after loading the model, this code snippet is also manipulating the root mesh by setting its ID, name, position, rotation, and scale. This allows for immediate customization of the model's properties once it has been loaded into the scene. The previous snippet didn't include these post-loading operations.
+
+
+

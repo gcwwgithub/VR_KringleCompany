@@ -1,4 +1,4 @@
-# VR_KringleCompany
+![image](https://github.com/gcwwgithub/VR_KringleCompany/assets/30390539/7a187888-1e8f-45bd-b1bc-9737d84beea8)# VR_KringleCompany
 Great Asset, Great Great Asset
 
 ## BablyonJS
@@ -731,3 +731,548 @@ Another Sound object named "sound" is created with a source file located at "ass
 
 In summary, this function initializes two sounds for the scene: one for background music that loops (but does not autoplay), and another for a button press effect (with default playback settings). These sounds can be controlled programmatically to play, stop, pause, etc., within the application.
 
+### Constructor
+You can split up huge classes into components so something like this
+```
+export class TextPlane {
+    constructor(
+        name: string,
+        width: number,
+        height: number,
+        x: number,
+        y: number,
+        z: number,
+        text: string,
+        backgroundColor: string,
+        textColor: string,
+        fontSize: number
+    ) {
+        // Create the plane mesh
+        const textPlaneMesh = BABYLON.MeshBuilder.CreatePlane(name, { width, height }, scene);
+
+        // Position the plane
+        textPlaneMesh.position.set(x, y, z);
+
+        // Create a dynamic texture for the plane
+        const planeTexture = new BABYLON.AdvancedDynamicTexture.CreateForMesh(
+            textPlaneMesh,
+            width,
+            height,
+            false
+        );
+
+        // Set the background color of the texture
+        planeTexture.background = backgroundColor;
+
+        // Create a text block to display the text on the plane
+        const planeText = new BABYLON.TextBlock(name + " text", planeTexture);
+        planeText.text = text;
+        planeText.fontSize = fontSize;
+        planeText.color = new BABYLON.Color4(1, 1, 1, 1); // White text color
+
+        // Rotate the text block to face the camera
+        planeText.rotation.y = -Math.PI / 2;
+    }
+}
+
+```
+You are recommended to create a file for this in the same folder as all your classes then in the code write this
+```
+export * from './text-plane'
+export * from './rigidbody'
+```
+Then in the main code just do
+'''
+import {} from './components/meshes'
+'''
+
+### Interfaces?
+export interface HelloMesh {
+    scene : Scene;
+    mesh : Mesh;
+    label : TextPlane;
+}    
+
+export class HelloSphere extends AbstractMesh implements HelloMesh {
+    scene : Scene;
+    mesh : Mesh;
+    label : TextPlane;
+
+constructor(name: string, options : {diameter : number}, scene : Scene)
+{
+  super(name,scene);
+  this.scene = scene;
+  this.mesh = MeshBuilder.CreateSphere("Hi". options, scene);
+  this.mesh.material = new StandardMaterial("Mat", scene);
+  this.label = new TextPlane(....... some parameters here)
+  this.addChild(this.label.mesh);
+}
+
+  
+}
+
+### Create Ground
+```
+// ground
+const groundMaterial = new StandardMaterial("ground material", scene);
+
+//back will not be rendererd
+groundMaterial.backFaceCulling = true;
+groundMaterial.diffuseTexture = new Texture('assets/textures/grass.png',
+
+scene);
+const ground = MeshBuilder.CreateGround("ground", {width: 12, height: 12}, scene);
+
+ground.material = groundMaterial;
+ground.position.set(0, -1, 8);
+```
+
+### Behaviours to create interaction
+```
+const pointerDragBehavior = new PointerDragBehavior({
+               dragPlaneNormal: new BABYLON.Vector3(0, 1, 0), // Makes the drag plane parallel to the y-axis
+
+});
+pointerDragBehavior.onDragStartObservable.add(evtData => {
+                              console.log("drag start: pointer id " + evtData.pointerId);
+                              console.log(evtData);
+
+});
+sphere.addBehavior(pointerDragBehavior);
+```
+Pointer Drag Behavior: A pointer drag behavior is created using the PointerDragBehavior class. This class allows you to drag meshes around the scene using a mouse or pointer. In this code, the dragPlaneNormal property is set to new BABYLON.Vector3(0, 1, 0), which makes the drag plane parallel to the y-axis. This means that the mesh can only be dragged up and down.
+
+onDragStartObservable: This observable is used to listen for drag events. In this code, an event handler is added to the onDragStartObservable using the add method. The event handler logs the pointer ID and event data to the console when the dragging starts.
+
+Adding the behavior to the sphere: The pointerDragBehavior is then added to the sphere mesh using the addBehavior method. This enables the drag functionality for the sphere.
+### Actions
+```
+private initActions() {
+const actionManager = (this.actionManager = new ActionManager(this.scene));
+
+actionManager.isRecursive = true;
+
+const light = this.scene.getLightById("default light");
+actionManager
+ .registerAction(new InterpolateValueAction(
+        ActionManager.OnPickTrigger,
+        light,
+        "diffuse",
+        Color3.Black(),
+        1000
+        )
+       )
+      .then(
+          new InterpolateValueAction(
+              ActionManager.OnPickTrigger,
+              light,
+              "diffuse",
+              Color3.White(),
+              1000
+             )
+         };
+
+actionManager.registerAction(
+    new InterpolateValueAction(
+        ActionManager.OnPickDownTrigger,
+        this,
+        "scaling",
+        new Vector3(2, 2, 2),
+        1000,
+        new PredicateCondition(actionManager, () => {
+            return light.diffuse.equals(Color3.Black());
+        })
+    )
+);
+
+const otherMesh = this.scene.getMeshById("sphere");
+actionManager.registerAction(
+    new SetValueAction(
+        {
+            trigger: ActionManager.OnIntersectionEnterTrigger,
+            parameter: {
+                mesh: otherMesh,
+                usePreciseIntersection: true,
+            },
+        },
+        this.mesh.material,
+        "wireframe",
+        true
+    )
+);
+
+}
+```
+To use this function, just call it in the constructor 
+Here is the explanation of the code
+Light Color Change on Pick:
+Action 1: Fades the light (identified as "default light") to black (Color3.Black()) over 1000 milliseconds when it is picked/clicked.
+Action 2: Fades the same light back to white (Color3.White()) over 1000 milliseconds when it is picked/clicked again.
+
+Scaling on Pick with Condition:
+Action: Scales the this object (likely referring to a mesh in the scene) to double its size (Vector3(2, 2, 2)) over 1000 milliseconds when it is picked/clicked.
+Condition: This action has a PredicateCondition. It will only execute if the light object's 'diffuse' color is currently black.
+
+Wireframe Toggle on Intersection:
+Action: Sets the 'wireframe' property of another mesh's material to 'true' when this.mesh intersects with a mesh identified as "sphere". The usePreciseIntersection: true parameter ensures accurate intersection detection.
+
+### Keyboard Actions
+Assuming we continue from the previous code
+```
+this.scene.actionManager.registerAction(
+    new ExecuteCodeAction(
+        {
+            trigger: ActionManager.OnKeyUpTrigger,
+            parameter: "r",
+        },
+        () => {
+            this.scaling.setAll(1);
+            this.mesh.material.wireframe = false;
+            console.log("r was pressed: reset " + this.name);
+        }
+    )
+);
+```
+Presumably, this code provides a reset mechanism. Pressing the "r" key likely triggers other actions that might scale or change the wireframe mode of a mesh. Releasing the "r" key executes this snippet to restore the mesh to its default state.
+
+### Observables
+```
+const onIntersectObservable = new Observable<boolean>();
+scene.registerBeforeRender(function () {
+  const isIntersecting = sphere.intersectsMesh(helloSphere, true, true);
+  onIntersectObservable.notifyObservers(isIntersecting);
+});
+
+helloSphere.onIntersectObservable = onIntersectObservable;
+
+const redColor = Color3.Red();
+const whiteColor = Color3.White();
+
+helloSphere.onIntersectObservable.add((isIntersecting) => {
+  const material = helloSphere.mesh.material as StandardMaterial;
+  const isRed = material.diffuseColor === redColor;
+  if (isIntersecting && !isRed) {
+    material.diffuseColor = redColor;
+  } else if (!isIntersecting && isRed) {
+    material.diffuseColor = whiteColor;
+  }
+});
+```
+In the sphere code,
+```
+    scene : Scene;
+    mesh : Mesh;
+    label : TextPlane;
+    onIntersectObservable : Observable<boolean>
+}    
+
+export class HelloSphere extends AbstractMesh implements HelloMesh {
+    scene : Scene;
+    mesh : Mesh;
+    label : TextPlane;
+ onIntersectObservable : Observable<boolean>
+
+//code continues
+```
+Observable for Intersection:
+onIntersectObservable: An Observable is created. Observables are used in Babylon.js to notify subscribers when specific events occur. In this case, this observable will be used to signal when intersections happen.
+
+Intersection Check Loop (scene.registerBeforeRender):
+
+scene.registerBeforeRender: Registers a function to be executed before each frame is rendered in the scene. This ensures the intersection check happens continuously.
+sphere.intersectsMesh(helloSphere, true, true): This line checks if the sphere mesh intersects with the helloSphere mesh. The true parameters ensure precise intersection calculations.
+onIntersectObservable.notifyObservers(isIntersecting): Notifies all subscribers of the onIntersectObservable whether an intersection is currently happening (isIntersecting will be either true or false).
+
+Handling the Observable (helloSphere.onIntersectObservable.add):
+helloSphere.onIntersectObservable: This references the onIntersectObservable created earlier and attaches a subscriber to it.
+Subscriber Function: The provided function will be executed whenever the onIntersectObservable is notified.
+It receives an isIntersecting boolean indicating the current intersection status.
+It changes the diffuseColor property of the helloSphere's material:
+To red (Color3.Red()) if the meshes are intersecting and the color isn't already red.
+Back to white (Color3.White()) if they are not intersecting and the color is currently red.
+
+```
+// 2. create an observable for checking distance
+const onDistanceChangeObservable = new Observable<number>();
+let previousState: number = null;
+scene.onBeforeRenderObservable.add(() => {
+  const currentState = Vector3.Distance(
+    sphere.position,
+    helloSphere.position
+  );
+  if (currentState !== previousState) {
+    console.log("distance updated!");
+    previousState = currentState;
+    onDistanceChangeObservable.notifyObservers(currentState);
+  }
+});
+
+helloSphere.onDistanceChangeObservable = onDistanceChangeObservable;
+
+const blueColor = Color3.Blue();
+helloSphere.onDistanceChangeObservable.add((distance) => {
+  const isCloseEnough = distance < 1.2;
+  const material = helloSphere.mesh.material as StandardMaterial;
+  const isBlue = material.diffuseColor === blueColor;
+  const isRed = material.diffuseColor === redColor;
+  if (isCloseEnough && !isBlue && !isRed) {
+    material.diffuseColor = blueColor;
+  } else if (!isCloseEnough && isBlue) {
+    material.diffuseColor = whiteColor;
+  }
+});
+```
+1. Distance Observable:
+onDistanceChangeObservable: An Observable is created to track changes in distance between the meshes.
+previousState: A variable to store the previous distance value, used for comparison.
+
+2. Distance Calculation Loop (scene.onBeforeRenderObservable.add):
+scene.onBeforeRenderObservable.add: Registers a function to be executed before each frame renders.
+Vector3.Distance(sphere.position, helloSphere.position): Calculates the distance between the centers of the sphere and helloSphere meshes.
+Change Detection:
+If the current distance is different from the previous distance:
+Log a message indicating the distance has changed.
+Update previousState with the current distance.
+Notify observers of the onDistanceChangeObservable with the new distance value.
+
+3. Handling Distance Changes (helloSphere.onDistanceChangeObservable.add):
+helloSphere.onDistanceChangeObservable: Attaches an observer that will execute code whenever the distance observable is notified.
+Subscriber Function:
+Receives the updated distance between the meshes.
+isCloseEnough: Calculates if the meshes are within a specified threshold (1.2 units in this case).
+Updates the helloSphere's material diffuseColor based on these conditions:
+Blue: If the meshes are close enough, and the material isn't already blue or red, set the color to blue.
+White: If the meshes are not close enough and the color is currently blue, set the color back to white.
+
+### Create Custom Observer
+```
+const observer = new Observer<number>((distance) => {
+  helloSphere.label.textBlock.text = "d: " + distance.toFixed(2);
+}, -1);
+onDistanceChangeObservable.observers.push(observer);
+
+```
+
+### Coroutines
+```
+const addObserverCoroutine = function* () {
+  console.log("frame " + scene.getFrameId() + ": do nothing");
+  yield;
+  console.log("frame " + scene.getFrameId() + ": add observer");
+  onDistanceChangeObservable.observers.push(observer);
+  yield;
+  console.log("frame " + scene.getFrameId() + ": do nothing");
+};
+scene.onBeforeRenderObservable.runCoroutineAsync(addObserverCoroutine());
+```
+
+
+Purpose of the Function
+The primary purpose of this function is to delay the addition of an observer to the onDistanceChangeObservable until a later frame. Here's how it works:
+
+Coroutine Definition:
+addObserverCoroutine: This function is defined as a generator function (notice the function* syntax). Generator functions are special in JavaScript, allowing them to pause and resume execution using the yield keyword.
+Coroutines in Babylon.js are a way to execute code over multiple frames, often to introduce delays or create sequences of actions.
+
+Steps:
+Log a message: Logs the current frame with the message "frame [frame number] : do nothing".
+yield: Pauses the execution of the coroutine and resumes it in the next frame.
+Log a message: Logs the current frame with the message "frame [frame number] : add observer".
+Add the observer: Pushes an observer (which is assumed to be defined elsewhere in your code) onto the list of observers for the onDistanceChangeObservable.
+yield: Pauses the execution again.
+Log a message: Logs the current frame with the message "frame [frame number] : do nothing".
+
+Executing the Coroutine
+scene.onBeforeRenderObservable.runCoroutineAsync(addObserverCoroutine()): This line starts the execution of the addObserverCoroutine.
+runCoroutineAsync ensures that the code within the coroutine will be spread out over multiple frames (because of the yield statements).
+
+Overall Effect
+By using a coroutine, this code:
+Delays Adding Observer: The observer won't be added to the onDistanceChangeObservable immediately. Instead, it will be added in the frame after the coroutine begins executing.
+Spreads Execution over Frames: The logging statements combined with the yield help visualize how the coroutine will run its code split across multiple frames of rendering
+
+```
+const coroutine = function* () {
+  (async function () {
+    await Tools.DelayAsync(2000);
+    console.log("frame " + scene.getFrameId() + ": fn 1");
+  })();
+  yield;
+  (async function () {
+    await Tools.DelayAsync(2000);
+    console.log("frame " + scene.getFrameId() + ": fn 2");
+  })();
+  yield;
+  (async function () {
+    console.log("frame " + scene.getFrameId() + ": fn 3");
+  })();
+  yield Tools.DelayAsync(1000);
+  (async function () {
+    console.log("frame " + scene.getFrameId() + ": fn 4");
+  })();
+};
+scene.onBeforeRenderObservable.runCoroutineAsync(coroutine());
+```
+This code performs the following actions:
+
+Starts an anonymous async function that waits for 2000ms (2 seconds), then logs the current frame ID along with the string ": fn 1".
+Yields control back to the scene rendering loop, effectively pausing the coroutine until the next frame.
+Starts another anonymous async function that also waits for 2000ms, then logs the current frame ID along with the string ": fn 2".
+Yields control back to the scene rendering loop again.
+Starts yet another anonymous function immediately, without a delay, which logs the current frame ID along with the string ": fn 3".
+Yields control, but this time waits for 1000ms (1 second) before the next function in the coroutine is eligible to run.
+Starts the last anonymous async function that logs the current frame ID along with the string ": fn 4".
+The last line scene.onBeforeRenderObservable.runCoroutineAsync(coroutine()); schedules the coroutine to run within the scene's onBeforeRenderObservable, which will execute its steps asynchronously according to the yields and delays, aligning with the scene's render frames.
+
+### Locomotion
+```
+initLocomotion(
+  movement: MovementMode,
+  xr: WebXRDefaultExperience,
+  featureManager: WebXRFeaturesManager,
+  ground: Mesh
+) {
+  switch (movement) {
+    case MovementMode.Teleportation:
+      console.log("movement mode: teleportation");
+      const teleportation = featureManager.enableFeature(
+        WebXRFeatureName.TELEPORTATION,
+        "stable",
+        {
+          xrInput: xr.input,
+          floorMeshes: [ground],
+          timeToTeleport: 2000,
+          useMainComponentOnly: true,
+          defaultTargetMeshOptions: {
+            teleportationFillColor: "#55FF99",
+            teleportationBorderColor: "blue",
+            torusArrowMaterial: ground.material,
+          },
+        },
+        true,
+        true
+      ) as WebXRMotionControllerTeleportation;
+      teleportation.parabolicRayEnabled = true;
+      teleportation.parabolicCheckRadius = 2;
+      break;
+
+    case MovementMode.Controller:
+      console.log("movement mode: controller");
+      featureManager.disableFeature(WebXRFeatureName.TELEPORTATION);
+      featureManager.enableFeature(WebXRFeatureName.MOVEMENT, "latest", {
+        xrInput: xr.input,
+      });
+      break;
+
+    case MovementMode.Walk:
+      console.log("movement mode: walk");
+      featureManager.disableFeature(WebXRFeatureName.TELEPORTATION);
+      const xrRoot = new TransformNode("xr root", scene);
+      xr.baseExperience.camera.parent = xrRoot;
+      featureManager.enableFeature(
+        WebXRFeatureName.WALKING_LOCOMOTION,
+        "stable",
+        {
+          locomotionTarget: xrRoot,
+        }
+      );
+      break;
+  }
+}
+```
+This is how to activate
+```
+const xr = await scene.createDefaultXRExperienceAsync({
+  uiOptions: {
+    sessionMode: "immersive-vr",
+    // sessionMode: 'immersive-ar'
+  },
+  optionalFeatures: true,
+});
+// only for debugging
+(window as any).xr = xr;
+
+const featureManager = xr.baseExperience.featuresManager;
+console.log(WebXRFeaturesManager.GetAvailableFeatures());
+
+// locomotion
+const movement = MovementMode.Walk;
+this.initLocomotion(movement, xr, featureManager, ground, scene);
+```
+
+### Hand Track
+```
+// hand tracking
+try {
+  featureManager.enableFeature(WebXRFeatureName.HAND_TRACKING, "latest", {
+    xrInput: xr.input,
+    jointMeshes: {
+      disableDefaultHandMesh: false,
+    },
+  });
+} catch (error) {
+  console.log(error);
+}
+
+// enabled features
+console.log(featureManager.getEnabledFeatures());
+```
+
+### Bimanual Interaction
+```
+// multiple pointer scale
+const multiPointerScaleBehavior = new MultiPointerScaleBehavior();
+helloSphere.addBehavior(multiPointerScaleBehavior);
+```
+
+### Gizmos
+```
+// more behaviors
+// default gizmo
+const gizmoManager = new GizmoManager(scene);
+// gizmoManager.positionGizmoEnabled = true;
+// gizmoManager.rotationGizmoEnabled = true;
+// gizmoManager.scaleGizmoEnabled = true;
+gizmoManager.boundingBoxGizmoEnabled = true;
+```
+### Natural Grabbing
+```
+// hand/controller drag
+let mesh: AbstractMesh;
+xr.input.onControllerAddedObservable.add((controller) => {
+  controller.onMotionControllerInitObservable.add((motionController) => {
+    // const ids = motionController.getComponentIds();
+    // const trigger = motionController.getComponent(ids[0]);
+    const trigger = motionController.getComponentOfType("trigger");
+    trigger.onButtonStateChangedObservable.add(() => {
+      if (trigger.changes.pressed) {
+        if (trigger.pressed) {
+          if (mesh == xr.pointerSelection.getMeshUnderPointer()) {
+            controller.uniqueId
+            console.log("mesh under controller pointer: " + mesh.name);
+            if (mesh.name != "ground") {
+              const distance = Vector3.Distance(
+                motionController.rootMesh.getAbsolutePosition(),
+                mesh.getAbsolutePosition()
+              );
+              console.log("distance: " + distance);
+              if (distance < 1) {
+                mesh.setParent(motionController.rootMesh);
+                console.log("grab mesh: " + mesh.name);
+              }
+            } else {
+              console.log("no mesh under pointer");
+            }
+          }
+        } else {
+          if (mesh && mesh.parent) {
+            mesh.setParent(null);
+            console.log("release mesh: " + mesh.name);
+          }
+        }
+      }
+    });
+  });
+});
+
+```

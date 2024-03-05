@@ -98,3 +98,35 @@ VR Commuting Simulator Example: The video cites a specific example of a VR commu
 Consumer Hardware: For consumer VR, locomotion design must also consider the limitations and capabilities of available hardware. Designers often need to find innovative solutions that balance realism and accessibility, ensuring a broad user base can comfortably engage with the VR environment.
 
 User Experience and Design Considerations: Effective locomotion design is key to a successful immersive experience. It requires a deep understanding of user interaction, spatial perception, and the desired level of immersion. Designers must carefully craft locomotion mechanics that align with the application's objectives and user expectations.
+
+## Mentimeter
+![Image Description](Pictures/Week8_Slide1.PNG)
+![Image Description](Pictures/Week8_Slide2-1.PNG)
+![Image Description](Pictures/Week8_Slide2-2.PNG)
+![Image Description](Pictures/Week8_Slide2-3.PNG)
+![Image Description](Pictures/Week8_Slide2-4.PNG)
+![Image Description](Pictures/Week8_Slide3-1.PNG)
+![Image Description](Pictures/Week8_Slide3-2.PNG)
+![Image Description](Pictures/Week8_Slide3-3.PNG)
+![Image Description](Pictures/Week8_Slide3-4.PNG)
+![Image Description](Pictures/Week8_Slide4-1.PNG)
+![Image Description](Pictures/Week8_Slide4-2.PNG)
+![Image Description](Pictures/Week8_Slide5-1.PNG)
+![Image Description](Pictures/Week8_Slide5-2.PNG)
+![Image Description](Pictures/Week8_Slide6-1.PNG)
+![Image Description](Pictures/Week8_Slide6-2.PNG)
+![Image Description](Pictures/Week8_Slide7-1.PNG)
+![Image Description](Pictures/Week8_Slide7-2.PNG)
+![Image Description](Pictures/Week8_Slide8-1.PNG)
+![Image Description](Pictures/Week8_Slide8-2.PNG)
+![Image Description](Pictures/Week8_Slide9-1.PNG)
+![Image Description](Pictures/Week8_Slide9-2.PNG)
+![Image Description](Pictures/Week8_Slide10-1.PNG)
+![Image Description](Pictures/Week8_Slide10-2.PNG)
+![Image Description](Pictures/Week8_Slide11-1.PNG)
+![Image Description](Pictures/Week8_Slide11-2.PNG)
+![Image Description](Pictures/Week8_Slide12-1.PNG)
+![Image Description](Pictures/Week8_Slide12-2.PNG)
+![Image Description](Pictures/Week8_Slide13-1.PNG)
+![Image Description](Pictures/Week8_Slide13-2.PNG)
+

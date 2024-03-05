@@ -111,6 +111,7 @@ User Experience and Design Considerations: Effective locomotion design is key to
 ![Image Description](Pictures/Week8_Slide3-4.PNG)
 ![Image Description](Pictures/Week8_Slide4-1.PNG)
 ![Image Description](Pictures/Week8_Slide4-2.PNG)
+![Image Description](Pictures/Week8_Slide4-3.PNG)
 ![Image Description](Pictures/Week8_Slide5-1.PNG)
 ![Image Description](Pictures/Week8_Slide5-2.PNG)
 ![Image Description](Pictures/Week8_Slide6-1.PNG)

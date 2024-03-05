@@ -1,4 +1,4 @@
-![image](https://github.com/gcwwgithub/VR_KringleCompany/assets/30390539/7a187888-1e8f-45bd-b1bc-9737d84beea8)# VR_KringleCompany
+# VR_KringleCompany
 Great Asset, Great Great Asset
 
 ## BablyonJS

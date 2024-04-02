@@ -16,18 +16,34 @@
 
 
 ## Mentimeter
+
+### Q1
 ![Image Description](Pictures/Week10_MentiSlide_1.PNG)
+
+### Q2
 ![Image Description](Pictures/Week10_MentiSlide_2_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_2_2.PNG)
+
+### Q3
 ![Image Description](Pictures/Week10_MentiSlide_3_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_3_2.PNG)
+
+### Q4
 ![Image Description](Pictures/Week10_MentiSlide_4_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_4_2.PNG)
+
+### Q5
 ![Image Description](Pictures/Week10_MentiSlide_5_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_5_2.PNG)
+
+### Q6
 ![Image Description](Pictures/Week10_MentiSlide_6_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_6_2.PNG)
+
+### Q7
 ![Image Description](Pictures/Week10_MentiSlide_7_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_7_2.PNG)
+
+### Q8
 ![Image Description](Pictures/Week10_MentiSlide_8_1.PNG)
 ![Image Description](Pictures/Week10_MentiSlide_8_2.PNG)

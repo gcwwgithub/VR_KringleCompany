@@ -135,21 +135,41 @@ Do i need to explain these systems?
 He mentions ECS as well
 
 ## Mentimeter Questions
+
+### Q1
 ![Image Description](Pictures/Week5_Slide1.JPG)
 
+
+### Q2 & 3
 The image below is used for Q2 and 3
 ![Image Description](Pictures/Week5_Slide19.PNG)
 ![Image Description](Pictures/Week5_Slide2.JPG)
 ![Image Description](Pictures/Week5_Slide3.JPG)
 
+### Q4
 ![Image Description](Pictures/Week5_Slide4.JPG)
 In this case - The depth here represeents Dvirt. I thought it was distance but oh well
 
+### Q5
 ![Image Description](Pictures/Week5_Slide5.JPG)
+
+### Q6
 ![Image Description](Pictures/Week5_Slide6.JPG)
+
+### Q7
 ![Image Description](Pictures/Week5_Slide7.JPG)
+
+### Q8
 ![Image Description](Pictures/Week5_Slide8.JPG)
+
+### Q9
 ![Image Description](Pictures/Week5_Slide20.PNG)
+
+### Q10
 ![Image Description](Pictures/Week5_Slide9.JPG)
+
+### Q11
 ![Image Description](Pictures/Week5_Slide10.JPG)
+
+### Q12
 ![Image Description](Pictures/Week5_Slide11.JPG)

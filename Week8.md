@@ -1,9 +1,11 @@
 # VR_KringleCompany
+
 Great Asset, Great Great Asset
 
 Didnt watch the video hehe. I used chatgpt to summarise it, it might not be accurate
 
 ## Interaction Mechanics:
+
 The video explained that the nature of user interactions within immersive applications is largely determined by the hardware components available. Different devices and setups offer varying capabilities and constraints, influencing how users can interact with the virtual environment.
 It emphasized the dependency of interaction mechanics on the hardware, illustrating that the design and implementation of these mechanics must consider the limitations and affordances of the system in use.
 The discussion included how these mechanics are integral to creating immersive and intuitive user experiences, suggesting that the choice of hardware and corresponding interaction design should be aligned with the application's objectives and user expectations.
@@ -16,6 +18,7 @@ VR Environments: The video highlighted how VR systems like HTC Vive employ motio
 Comparison Between Desktop and VR: By contrasting the interaction mechanics in desktop simulations with those in VR environments, the video underscored the impact of hardware on the design of these mechanics. While a mouse click in a desktop environment might select an item, in VR, the user might physically reach out and grab it, providing a more immersive experience.
 
 ## Viewpoint Control
+
 Definition and Importance: Viewpoint control is defined as the ability of users to dynamically control their perspective within a virtual environment. It's considered an essential feature in all VR and immersive systems, allowing users to look around and explore the virtual space as if they were physically present.
 
 Passive Interaction: Viewpoint control is often categorized as a passive form of interaction. It occurs in the background, enabling users to navigate and observe the virtual environment without making conscious efforts. This seamless control is crucial for maintaining immersion and preventing users from feeling disconnected from the virtual world.
@@ -28,7 +31,8 @@ Applications Across Platforms: The concept extends beyond VR to other immersive 
 
 Design Considerations: When designing immersive applications, it's important to consider the level of viewpoint control needed based on the desired immersion level and the hardware being used. This ensures that the users' experience is as natural and engaging as possible.
 
-## Hand Gestures 
+## Hand Gestures
+
 Importance of Hand Gestures: Hand gestures allow users to interact with virtual environments in an intuitive and natural way, enhancing the sense of presence and immersion. They enable actions like touching, grabbing, or manipulating virtual objects, which are fundamental to many VR experiences.
 
 Fidelity of Hand Interactions: The video emphasizes that the fidelity of hand interactions can vary greatly depending on the technology used. High-fidelity interactions, where the users' hand movements are accurately translated into the virtual environment, provide a more immersive and intuitive user experience.
@@ -44,6 +48,7 @@ Implications for Design: The choice of hand gesture technology has significant d
 Accessibility and Inclusivity: While the video focuses on hand gestures, it also acknowledges the broader context of accessibility, implying that immersive experiences should also consider alternative interaction mechanisms for users who may not be able to use standard hand gesture controls.
 
 ## Body Gestures
+
 Embodiment in VR: Full body gestures contribute to a sense of embodiment, where users feel that their virtual representation accurately mirrors their real body movements. This concept is crucial for creating immersive experiences that make users feel present and engaged within the virtual environment.
 
 Hardware Requirements: Implementing full body gestures requires additional hardware that can track various body parts. This could include IMU-based trackers, which are placed on different body segments to capture movement accurately.
@@ -56,7 +61,8 @@ Limitations of Desktop Modalities: Unlike hand gestures or viewpoint control, th
 
 Accessibility and Inclusivity: The discussion also highlights the importance of considering diverse user needs, including those who may not be able to use standard controllers or trackers. Developing inclusive design strategies ensures broader accessibility of immersive technologies.
 
-## Interaction Authenticity 
+## Interaction Authenticity
+
 Natural Interactions: These are designed to mirror real-world actions within a virtual setting, helping users feel more present and engaged in the immersive environment. The video emphasized that natural interactions should be intuitive, leveraging users' real-life experiences to guide their behaviors in the virtual world.
 
 Artificial Interactions: These interactions do not have real-world analogs and are crafted specifically for virtual environments. They can offer unique and novel experiences that are only possible within the context of immersive technology. The video highlighted the creative potential of artificial interactions in enhancing the immersive experience and providing users with capabilities beyond the constraints of physical reality.
@@ -70,6 +76,7 @@ Impact on User Experience: The authenticity of interactions can significantly af
 Consideration of Use Cases: The choice between natural and artificial interactions should be informed by the specific use cases and objectives of the immersive application. Understanding the audience and the context in which the application will be used is crucial for designing appropriate interaction mechanics.
 
 ## GUI Interaction
+
 Heads-Up Displays (HUDs): In immersive applications, GUIs are often integrated as HUDs, which provide information directly within the user's field of view. This approach is particularly prevalent in VR, where GUI elements must be seamlessly integrated into the 3D environment to maintain immersion.
 
 Interaction Methods: The video explains how users interact with GUIs in immersive environments, which can vary significantly from traditional screen-based interfaces. In VR, for instance, interactions can involve direct manipulation using hand gestures or controller inputs, allowing users to engage with UI elements in a more natural and intuitive manner.
@@ -85,6 +92,7 @@ Adapting to Hardware Limitations: The design of GUIs in immersive applications m
 User Experience: Ultimately, the goal of GUI design in immersive environments is to provide a user-friendly and efficient way for users to access information and perform tasks, enhancing the overall experience without overwhelming or confusing the user.
 
 ## Locomotion Interaction
+
 Core Component: Locomotion interaction is a fundamental aspect of immersive environments, enabling users to move and navigate within virtual spaces. It's crucial for a wide range of applications, from gaming to training simulations, and directly impacts the user's sense of presence and immersion.
 
 Challenges: One of the main challenges in designing locomotion interactions is the discrepancy between the user's physical space and the vast, often limitless, virtual environments. Designers must create intuitive and comfortable means of navigation that prevent motion sickness while maintaining immersion.
@@ -99,7 +107,16 @@ Consumer Hardware: For consumer VR, locomotion design must also consider the lim
 
 User Experience and Design Considerations: Effective locomotion design is key to a successful immersive experience. It requires a deep understanding of user interaction, spatial perception, and the desired level of immersion. Designers must carefully craft locomotion mechanics that align with the application's objectives and user expectations.
 
+## Embodiment
+![Image Description](Pictures/Week8_Lecture1.PNG)
+
+
+
+
+
+
 ## Mentimeter
+
 ![Image Description](Pictures/Week8_Slide1.PNG)
 ![Image Description](Pictures/Week8_Slide2-1.PNG)
 ![Image Description](Pictures/Week8_Slide2-2.PNG)
@@ -112,22 +129,39 @@ User Experience and Design Considerations: Effective locomotion design is key to
 ![Image Description](Pictures/Week8_Slide4-1.PNG)
 ![Image Description](Pictures/Week8_Slide4-2.PNG)
 ![Image Description](Pictures/Week8_Slide4-3.PNG)
+
+### Question 5
 ![Image Description](Pictures/Week8_Slide5-1.PNG)
 ![Image Description](Pictures/Week8_Slide5-2.PNG)
+
+### Question 6
 ![Image Description](Pictures/Week8_Slide6-1.PNG)
 ![Image Description](Pictures/Week8_Slide6-2.PNG)
+
+### Question 7
 ![Image Description](Pictures/Week8_Slide7-1.PNG)
 ![Image Description](Pictures/Week8_Slide7-2.PNG)
+
+### Question 8
 ![Image Description](Pictures/Week8_Slide8-1.PNG)
 ![Image Description](Pictures/Week8_Slide8-2.PNG)
+
+### Question 9
 ![Image Description](Pictures/Week8_Slide9-1.PNG)
 ![Image Description](Pictures/Week8_Slide9-2.PNG)
+
+### Question 10
 ![Image Description](Pictures/Week8_Slide10-1.PNG)
 ![Image Description](Pictures/Week8_Slide10-2.PNG)
+
+### Question 11
 ![Image Description](Pictures/Week8_Slide11-1.PNG)
 ![Image Description](Pictures/Week8_Slide11-2.PNG)
+
+### Question 12
 ![Image Description](Pictures/Week8_Slide12-1.PNG)
 ![Image Description](Pictures/Week8_Slide12-2.PNG)
+
+### Question 13
 ![Image Description](Pictures/Week8_Slide13-1.PNG)
 ![Image Description](Pictures/Week8_Slide13-2.PNG)
-

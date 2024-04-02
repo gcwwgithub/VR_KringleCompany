@@ -118,14 +118,18 @@ User Experience and Design Considerations: Effective locomotion design is key to
 ## Mentimeter
 
 ![Image Description](Pictures/Week8_Slide1.PNG)
+### Question 2
 ![Image Description](Pictures/Week8_Slide2-1.PNG)
 ![Image Description](Pictures/Week8_Slide2-2.PNG)
 ![Image Description](Pictures/Week8_Slide2-3.PNG)
 ![Image Description](Pictures/Week8_Slide2-4.PNG)
-![Image Description](Pictures/Week8_Slide3-1.PNG)
+
+### Question 3
 ![Image Description](Pictures/Week8_Slide3-2.PNG)
 ![Image Description](Pictures/Week8_Slide3-3.PNG)
 ![Image Description](Pictures/Week8_Slide3-4.PNG)
+
+### Question 4
 ![Image Description](Pictures/Week8_Slide4-1.PNG)
 ![Image Description](Pictures/Week8_Slide4-2.PNG)
 ![Image Description](Pictures/Week8_Slide4-3.PNG)
